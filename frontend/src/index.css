@@ -34,9 +34,3 @@
         @apply bg-zinc-700 rounded-md 
       }
 }
-
-@layer utilities {
-  .submit-button {
-    @apply rounded-lg
-  }
-}
