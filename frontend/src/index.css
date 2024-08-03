@@ -33,4 +33,42 @@
     .nav-item:hover {
         @apply bg-zinc-700 rounded-md 
       }
+    
+    .login {
+      @apply flex flex-col gap-2 text-white text-2xl my-auto rounded-xl self-center p-8 tracking-wider;
+      width: 35rem;
+      height: 35rem;
+      background: #212123;
+      color: #6C6C6C;
+    }
+
+    .button-inactive {
+      @apply rounded-xl py-2 px-10 size-fit self-center text-white mt-2 bg-indigo-400;
+    }
+
+    .button-active {
+      @apply rounded-xl py-2 px-10 size-fit self-center text-white mt-2 bg-indigo-600;
+    }
+
+    .button-active:hover {
+      @apply bg-indigo-700 shadow-xl;
+    }
+
+    .button-active:active {
+      @apply bg-indigo-800;
+    }
+
+    .button-submitted {
+      @apply rounded-xl py-2 px-10 size-fit self-center text-white mt-2 bg-green-700
+    }
+
+    .login input {
+      background: #3D3D3F;
+      @apply  py-2 px-4 rounded-full w-full;
+    }
+
+    .login h3 {
+      @apply pl-3;
+    }
+
 }
