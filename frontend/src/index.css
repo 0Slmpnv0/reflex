@@ -13,7 +13,7 @@
         @apply flex flex-col text-white h-screen text-center tracking-wider;
         background-color: var(--bg);
     }
-
+  
     .wrapper > p {
         color: #B5B5B5;
         @apply pt-3
@@ -33,7 +33,7 @@
     .nav-item:hover {
         @apply bg-zinc-700 rounded-md 
       }
-    
+  
     .login {
       @apply flex flex-col gap-2 text-white text-2xl my-auto rounded-xl self-center p-8 tracking-wider;
       width: 35rem;
