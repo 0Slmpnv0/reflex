@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 interface Props {
     children: ReactNode;
     onClick: () => void;
-    status: 'inactive' | 'active' | 'submitted'
+    status: 'inactive' | 'active' 
 }
 
 

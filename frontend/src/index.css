@@ -14,7 +14,7 @@
         background-color: var(--bg);
     }
 
-    .wrapper p {
+    .wrapper > p {
         color: #B5B5B5;
         @apply pt-3
     } 
@@ -58,17 +58,24 @@
       @apply bg-indigo-800;
     }
 
-    .button-submitted {
-      @apply rounded-xl py-2 px-10 size-fit self-center text-white mt-2 bg-green-700
-    }
-
     .login input {
       background: #3D3D3F;
-      @apply  py-2 px-4 rounded-full w-full;
+      @apply  py-2 px-4 rounded-full w-full text-white;
     }
 
     .login h3 {
       @apply pl-3;
     }
 
+    .google-icon {
+      @apply w-24 self-center
+    }
+
+    .google-icon:hover {
+      @apply bg-zinc-700 rounded-full p-1;
+    }
+
+    .error {
+      @apply text-left text-sm ml-3 text-red-500 pt-1;
+    }
 }
