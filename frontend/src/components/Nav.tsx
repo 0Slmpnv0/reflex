@@ -5,12 +5,12 @@ export default function Nav() {
           calendar
         </a>
         <a
-          href="another link"
+          href=""
           className="nav-item"
         >
           change <br /> form
         </a>
-        <a href="new link" className="nav-item">
+        <a href="" className="nav-item">
           How was <br />your day?
         </a>
       </div>
