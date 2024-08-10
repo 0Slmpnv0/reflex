@@ -39,10 +39,15 @@ function validateField(field: string, fieldType: 'login' | 'password'): fieldPro
             message = 'Login length must be between 5 and 15 symbols'
         }
     }
-    else{
-        if (field.length > 30 || field.length < 6) {
+
+    else {
+        if (field.length > 30) {
             value = true
-            message = 'Password length must be between 6 and 30'
+            message = 'Password is too long'
+        }
+        else if (field.length < 6) {
+            value = true
+            message = 'Password is too short'
         }
     }
 
@@ -78,7 +83,7 @@ export default function Login() {
     }
 
     return (
-            <form className='login'>
+            <form className='reg'>
                 <div className='field'>
                     <h3 className='text-left'>Login</h3>
                     <input  
@@ -118,19 +123,37 @@ export default function Login() {
                        
                 </div>
 
+                <div className='field'>
+                    <h3 className='text-left'>Confirm password</h3>
+                    <input 
+                    className='input mt-1' 
+                    type="password" 
+                    id='password'
+                    onChange={
+                        e => {
+                            setPassword(validateField(e.target.value, 'password'))
+                        }
+                    }
+                    required/> 
+                    <div className='h-6'>
+                        <p className={password.error.status ? 'error visible' : 'invisible'}>
+                            {password.error.message}
+                        </p>
+                    </div>    
+                       
+                </div>
+
 
                 <Button 
                 status={((login.error.status || password.error.status) || (!login.value || !password.value)) ? 'inactive' : 'active'}
                 onClick={handleClick}
                 >Submit</Button>
 
-                <p className='text-white text-lg'>Or log in with:</p>
+                <p className='text-white text-xl'>Or log in with:</p>
 
                 <img src='https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg' alt="Google" className="google-icon"/>
                 
                 <p className='text-sm m-0'>Other options <br /> coming soon...</p>
-                
-                <a className='text-blue-500 self-end' href=''>Register</a>
        </form>
     )        
 }

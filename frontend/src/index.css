@@ -23,7 +23,7 @@
 @layer components {
 
     .nav {
-        @apply flex-grow flex font-mono justify-center items-center;
+        @apply flex-grow flex font-mono justify-center items-center sm:flex-col md:flex-row sm:gap-20; 
       }
     
     .nav-item {
@@ -33,21 +33,13 @@
     .nav-item:hover {
         @apply bg-zinc-700 rounded-md 
       }
-  
-    .login {
-      @apply flex flex-col gap-2 text-white text-2xl my-auto rounded-xl self-center p-8 tracking-wider;
-      width: 35rem;
-      height: 35rem;
-      background: #212123;
-      color: #6C6C6C;
-    }
 
     .button-inactive {
-      @apply rounded-xl py-2 px-10 size-fit self-center text-white mt-2 bg-indigo-400;
+      @apply rounded-xl py-2 px-10 size-fit self-center text-white mb-3 mt-1 bg-indigo-400;
     }
 
     .button-active {
-      @apply rounded-xl py-2 px-10 size-fit self-center text-white mt-2 bg-indigo-600;
+      @apply rounded-xl py-2 px-10 size-fit self-center text-white mb-3 mt-1 bg-indigo-600;
     }
 
     .button-active:hover {
@@ -60,18 +52,39 @@
 
     .login input {
       background: #3D3D3F;
-      @apply  py-2 px-4 rounded-full w-full text-white;
+      @apply  md:py-2 px-4 rounded-full w-full text-white;
     }
 
     .login h3 {
       @apply pl-3;
     }
 
-    .google-icon {
-      @apply w-24 self-center
+    .login {
+      @apply flex flex-col gap-2 text-white text-2xl my-auto rounded-xl self-center pt-5 tracking-wider m-5 lg:w-2/5 xl:w-1/2 2xl:w-1/3 sm:pb-3 p-8;
+      background: #212123;
+      color: #6C6C6C;
     }
 
-    .google-icon:hover {
+    .reg {
+    @apply flex flex-col gap-2 text-white text-2xl my-auto rounded-xl self-center pt-5 tracking-wider m-5 lg:w-2/5 xl:w-1/2 2xl:w-1/3 sm:pb-3 p-8; 
+      background: #212123;
+      color: #6C6C6C;
+    }
+
+    .reg input {
+      background: #3D3D3F;
+      @apply  md:py-2 px-4 rounded-full w-full text-white
+    }
+
+     .reg h3 {
+      @apply pl-3
+     }
+
+    .google-icon {
+      @apply md:w-24 self-center sm:w-16
+    }
+
+    .google-icon:active {
       @apply bg-zinc-700 rounded-full p-1;
     }
 
