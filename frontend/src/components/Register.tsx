@@ -14,40 +14,53 @@ interface fieldProps {
 }
 
 
-function validateField(field: string, fieldType: 'login' | 'password'): fieldProps {
+function validateField(field: string, fieldType: 'login' | 'password' | 'confirm', password: string | undefined = undefined): fieldProps {
     const forbidden_login_symbols: Array<string> = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '+', '=', '[', ']', '{', '}', '|', '\\', ':', ';', '"', "'", '<', '>', ',', '.', '?', '/']
-    let value = false
+    let status_value = false
     let message = ''
 
     if (field.length === 0) {
-        value = true
+        status_value = true
         message = 'Field is required'
     }
 
     else if (fieldType === 'login') {
 
-        if (field.length <= 15 && field.length >= 5) {
+        if (field.length < 5) {
+            status_value = true
+            message = 'Too short!'
+        }
+
+        else if (field.length > 15) {
+                status_value = true
+                message = 'Too long!'
+        }
+
+        else {
             forbidden_login_symbols.forEach((symbol) => {
                 if (field.includes(symbol)) {
-                    value = true
-                    message = 'Login must not include special symbols'
+                    status_value = true
+                    message = 'No special symbols!'
                 }
             })
         } 
-        else {
-            value = true
-            message = 'Login length must be between 5 and 15 symbols'
+    }
+
+    else if (fieldType === 'password') {
+        if (field.length > 30) {
+            status_value = true
+            message = 'Too long!'
+        }
+        else if (field.length < 6) {
+            status_value = true
+            message = 'Too short!'
         }
     }
 
     else {
-        if (field.length > 30) {
-            value = true
-            message = 'Password is too long'
-        }
-        else if (field.length < 6) {
-            value = true
-            message = 'Password is too short'
+        if (field !== password) {
+            status_value = true
+            message = 'check out your password again!'
         }
     }
 
@@ -55,7 +68,7 @@ function validateField(field: string, fieldType: 'login' | 'password'): fieldPro
     return {
         value: field,
         error: {
-            status: value,
+            status: status_value,
             message: message
         }
     }
@@ -78,6 +91,14 @@ export default function Login() {
         }
     })
 
+    const [confirm, setConfirm] = useState<fieldProps>({
+        value: '',
+        error: {
+            status: false,
+            message: ''
+        }
+    }); 
+    
     const handleClick = () => {
         alert('Pretending to send the data to backend')
     }
@@ -128,16 +149,16 @@ export default function Login() {
                     <input 
                     className='input mt-1' 
                     type="password" 
-                    id='password'
+                    id='confirm'
                     onChange={
                         e => {
-                            setPassword(validateField(e.target.value, 'password'))
+                            setConfirm(validateField(e.target.value, 'confirm', password.value))
                         }
                     }
                     required/> 
                     <div className='h-6'>
-                        <p className={password.error.status ? 'error visible' : 'invisible'}>
-                            {password.error.message}
+                        <p className={confirm.error.status ? 'error visible' : 'invisible'}>
+                            {confirm.error.message}
                         </p>
                     </div>    
                        
@@ -145,7 +166,7 @@ export default function Login() {
 
 
                 <Button 
-                status={((login.error.status || password.error.status) || (!login.value || !password.value)) ? 'inactive' : 'active'}
+                status={((login.error.status || password.error.status || confirm.error.status) || (!login.value || !password.value || ! confirm.value)) ? 'inactive' : 'active'}
                 onClick={handleClick}
                 >Submit</Button>
 
