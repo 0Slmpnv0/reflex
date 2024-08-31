@@ -52,7 +52,7 @@
 
     .login input {
       background: #3D3D3F;
-      @apply  md:py-2 px-4 rounded-full w-full text-white;
+      @apply rounded-full w-full text-white md:py-2 px-4;
     }
 
     .login h3 {
@@ -60,20 +60,29 @@
     }
 
     .login {
-      @apply flex flex-col gap-2 text-white text-2xl my-auto rounded-xl self-center pt-5 tracking-wider m-5 lg:w-2/5 xl:w-1/2 2xl:w-1/3 sm:pb-3 p-8;
+      @apply flex flex-col gap-2;
+      @apply text-white text-2xl tracking-wider;
+      @apply my-auto self-center m-5;
+      @apply rounded-xl pt-5 lg:w-2/5 xl:w-1/2 2xl:w-1/3 pb-3 p-8;      
+
+
       background: #212123;
       color: #6C6C6C;
     }
 
     .reg {
-    @apply flex flex-col gap-2 text-white text-2xl my-auto rounded-xl self-center pt-5 tracking-wider m-5 lg:w-2/5 xl:w-1/2 2xl:w-1/3 sm:pb-3 p-8; 
+      @apply flex flex-col gap-2; 
+      @apply text-white text-2xl tracking-wider;
+      @apply  my-auto self-center m-5;
+      @apply  rounded-xl pt-5 p-8 pb-3 lg:w-2/5 xl:w-1/2 2xl:w-1/3 md:pb-5; 
+
       background: #212123;
       color: #6C6C6C;
     }
 
     .reg input {
       background: #3D3D3F;
-      @apply  md:py-2 px-4 rounded-full w-full text-white
+      @apply px-4 md:py-2 rounded-full w-full text-white
     }
 
      .reg h3 {
@@ -81,7 +90,7 @@
      }
 
     .google-icon {
-      @apply md:w-24 self-center sm:w-16
+      @apply self-center w-16 md:w-24
     }
 
     .google-icon:active {
@@ -89,6 +98,6 @@
     }
 
     .error {
-      @apply text-left text-sm ml-3 text-red-500 pt-1;
+      @apply text-left text-sm text-red-500 pt-1 ml-3;
     }
 }
