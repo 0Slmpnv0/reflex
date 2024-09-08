@@ -1,7 +1,8 @@
 import FieldSettings from "../components/FieldSettings";
+import { useState } from "react";
 
 type Field = {
-  type: "tag" | "num" | "checkbox" | "percent";
+  type: "tag" | "number" | "checkbox" | "percent";
   is_required?: boolean; // experimental. In future Ill support unrequired fields, but now idk how to make it not affect the Insights
   display: {
     is_display_field: boolean;
@@ -11,13 +12,13 @@ type Field = {
 
 let example_form_data: { [key: string]: Field } = {
   "How do I feel today?": {
-    type: "num",
+    type: "number",
     display: {
       is_display_field: false,
     },
   },
   "How many minutes did I exercise?": {
-    type: "num",
+    type: "number",
     display: {
       is_display_field: false,
     },
@@ -43,21 +44,27 @@ let example_form_data: { [key: string]: Field } = {
 };
 
 export default function ManageFormPage() {
-  // field_ data = fetch('backend/form_structure') - coming soon... (not soon at all.)
+  // field_data = fetch('backend/form_structure') - coming soon... (not soon at all.)
 
-  const field_data = example_form_data;
+  let fieldData = example_form_data
 
   return (
     <div className="wrapper gap-7">
       <h1 className="text-6xl mt-4 mb-20">Manage form </h1>
-      <FieldSettings
-        name="How do I feel today?"
-        type="tag"
-        onChangeType={() => alert("hui")}
-        onDelete={() => alert("pidor")}
-        selectOtions={["asdf", "asdfasdf"]}
-        selectorId="1"
-      />
+      {
+        Object.entries(fieldData).map(([name, daily_data]) => (
+          <FieldSettings 
+            key={name}
+            name={name}
+            fieldType={daily_data.type}
+            onChangeType={() => {
+              alert('hui')
+            }}
+            onDelete={() => alert('hui')}
+            id=""
+          />
+        ))
+      }
     </div>
   );
 }

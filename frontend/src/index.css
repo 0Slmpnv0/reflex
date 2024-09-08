@@ -101,8 +101,14 @@
     @apply flex w-2/4 text-black self-center h-12 rounded-xl px-1 text-2xl bg-white;
   }
 
-  .field-setting input {
-    @apply bg-transparent basis-4/6 outline-none
+  .field-setting textarea {
+    @apply bg-transparent basis-4/6 outline-none mt-2;
+    resize: none;
+  }
+
+  .field-setting textarea::-webkit-scrollbar {
+    display: none;
+    white-space: none;
   }
 
   .field-setting svg {
@@ -111,7 +117,7 @@
   }
 
   .type-selector {
-    @apply rounded-full text-center h-10 self-center pb-1 pl-1 ml-auto outline-none text-white;
+    @apply rounded-full text-center h-10 self-center pb-1 ml-auto outline-none text-white px-1;
     -moz-appearance: none;
     -webkit-appearance: none;
 
