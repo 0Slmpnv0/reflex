@@ -4,7 +4,7 @@ export default function Nav() {
       <a href="" className="nav-item">
         calendar
       </a>
-      <a href="localhost:1488/manage_form" className="nav-item">
+      <a href="http://localhost:1488/manage_form" className="nav-item">
         change <br /> form
       </a>
       <a href="" className="nav-item">

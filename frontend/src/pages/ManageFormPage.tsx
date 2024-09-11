@@ -2,7 +2,8 @@ import FieldSettings from "../components/FieldSettings";
 import { useState } from "react";
 
 type Field = {
-  type: "tag" | "number" | "checkbox" | "percent";
+  name: string;
+  type: "tag" | "number" | "checkbox" | "percent" | "unselected";
   is_required?: boolean; // experimental. In future Ill support unrequired fields, but now idk how to make it not affect the Insights
   display: {
     is_display_field: boolean;
@@ -11,31 +12,36 @@ type Field = {
 };
 
 let example_form_data: { [key: string]: Field } = {
-  "How do I feel today?": {
+  1: {
+    name: "How do I feel today?",
+    type: "tag",
+    display: {
+      is_display_field: false,
+    },
+  },
+  2: {
+    name: "How many minutes did I exercise?",
     type: "number",
     display: {
       is_display_field: false,
     },
   },
-  "How many minutes did I exercise?": {
-    type: "number",
-    display: {
-      is_display_field: false,
-    },
-  },
-  "Did I drink enough water?": {
+  3: {
+    name: "Did I drink enough water?",
     type: "checkbox",
     display: {
       is_display_field: false,
     },
   },
-  "What percentage of time was I productive?": {
+  4: {
+    name: "What percentage of time was I productive?",
     type: "percent",
     display: {
       is_display_field: true,
     },
   },
-  "Todays breakfast?": {
+  5: {
+    name: "Todays breakfast?",
     type: "tag",
     display: {
       is_display_field: false,
@@ -44,27 +50,96 @@ let example_form_data: { [key: string]: Field } = {
 };
 
 export default function ManageFormPage() {
-  // field_data = fetch('backend/form_structure') - coming soon... (not soon at all.)
+  // fieldData = fetch('backend/form_structure') - coming soon... (not soon at all.)
 
-  let fieldData = example_form_data
+  const [fieldData, setFieldData] = useState(example_form_data);
+
+  const onRename = (newName: string, id: string) => {
+    setFieldData({
+      ...fieldData,
+      [id]: {
+        ...fieldData[id],
+        name: newName,
+      },
+    });
+  };
+
+  const onNewField = () => {
+    let id = Object.keys(fieldData).length + 1;
+    setFieldData({
+      ...fieldData,
+      [id]: {
+        name: "New field",
+        type: "unselected",
+        display: {
+          is_display_field: false,
+        },
+      },
+    });
+  };
+
+  const onDelete = (idToDelete: string) => {
+    delete fieldData[idToDelete];
+    let newData: { [key: string]: Field } = {};
+
+    let i = 1;
+
+    Object.values(fieldData).forEach((currentField) => {
+      newData = {
+        ...newData,
+        [i]: {
+          ...currentField,
+        },
+      };
+      i++;
+    });
+    console.log(newData);
+    setFieldData(newData);
+  };
 
   return (
     <div className="wrapper gap-7">
       <h1 className="text-6xl mt-4 mb-20">Manage form </h1>
-      {
-        Object.entries(fieldData).map(([name, daily_data]) => (
-          <FieldSettings 
-            key={name}
-            name={name}
-            fieldType={daily_data.type}
-            onChangeType={() => {
-              alert('hui')
-            }}
-            onDelete={() => alert('hui')}
-            id=""
-          />
-        ))
-      }
+      {Object.entries(fieldData).map(([id, dailyData]) => (
+        <FieldSettings
+          key={id.concat(dailyData.name)}
+          name={dailyData.name}
+          fieldType={dailyData.type}
+          onChangeType={(newType) => {
+            setFieldData({
+              ...fieldData,
+              [id]: {
+                ...fieldData[id],
+                type: newType,
+              },
+            });
+          }}
+          onRename={onRename}
+          onDelete={onDelete}
+          id={id}
+        />
+      ))}
+
+      {Object.keys(fieldData).length < 5 ? (
+        <button className="new-field-button" onClick={onNewField}>
+          New field
+        </button>
+      ) : (
+        <p>No more fields available</p>
+      )}
+
+      {Object.keys(fieldData).length > 0 ? (
+        <button
+          className="new-field-button bg-indigo-500 mt-10 text-white hover:bg-indigo-600"
+          onClick={() => {
+            alert("pretend to send some data to the backend");
+          }}
+        >
+          Sumbit
+        </button>
+      ) : (
+        <></>
+      )}
     </div>
   );
 }

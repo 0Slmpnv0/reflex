@@ -112,19 +112,24 @@
   }
 
   .field-setting svg {
-    @apply h-12 ml-auto shrink-0 w-min hover:rounded-xl hover:bg-slate-300
-
+    @apply h-12 ml-auto shrink-0 w-min hover:rounded-xl hover:bg-slate-300;
   }
 
   .type-selector {
-    @apply rounded-full text-center h-10 self-center pb-1 ml-auto outline-none text-white px-1;
+    @apply rounded-full text-center h-10 self-center pb-1 ml-auto outline-none text-white px-2;
     -moz-appearance: none;
     -webkit-appearance: none;
-
   }
 
   .type-selector option {
-    @apply bg-zinc-700 rounded-xl
+    @apply bg-zinc-700 rounded-xl;
   }
 
+  .new-field-button {
+    @apply w-2/4 bg-white text-black self-center h-12 rounded-xl text-2xl;
+  }
+
+  .new-field-button:hover {
+    @apply bg-slate-200;
+  }
 }
