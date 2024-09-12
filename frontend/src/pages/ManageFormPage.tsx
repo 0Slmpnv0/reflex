@@ -99,7 +99,7 @@ export default function ManageFormPage() {
 
   return (
     <div className="wrapper gap-7">
-      <h1 className="text-6xl mt-4 mb-20">Manage form </h1>
+      <h1 className="text-3xl mb-10 md:text-4xl lg:text-6xl mt-4 lg:mb-20 ">Manage form </h1>
       {Object.entries(fieldData).map(([id, dailyData]) => (
         <FieldSettings
           key={id.concat(dailyData.name)}
@@ -133,6 +133,7 @@ export default function ManageFormPage() {
           className="new-field-button bg-indigo-500 mt-10 text-white hover:bg-indigo-600"
           onClick={() => {
             alert("pretend to send some data to the backend");
+            //also needs to forward to the main page
           }}
         >
           Sumbit

@@ -5,7 +5,7 @@ export default function Nav() {
           calendar
         </a>
         <a
-          href=""
+          href="http://localhost:1488/manage_form"
           className="nav-item"
         >
           change <br /> form

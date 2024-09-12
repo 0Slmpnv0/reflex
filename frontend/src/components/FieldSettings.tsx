@@ -44,7 +44,7 @@ export default function FieldSettings({
 
   return (
     <div className="field-setting">
-      <textarea
+      {/* <textarea
         name={name}
         defaultValue={name}
         id={id}
@@ -52,7 +52,9 @@ export default function FieldSettings({
         onBlur={(e) => {
           onRename(e.target.value, id);
         }}
-      ></textarea>
+      ></textarea> */}
+
+      <input type="text" defaultValue={name} />
 
       <select
         name="select"

@@ -98,25 +98,26 @@
   }
 
   .field-setting {
-    @apply flex w-2/4 text-black self-center h-12 rounded-xl px-1 text-2xl bg-white;
+    width: 95%; 
+    @apply flex md:w-3/4 lg:w-2/3 xl:w-1/2 text-black self-center h-12 rounded-xl px-1 text-2xl bg-white;
   }
 
-  .field-setting textarea {
-    @apply bg-transparent basis-4/6 outline-none mt-2;
+  .field-setting input {
+    @apply bg-transparent flex-grow min-w-0 outline-none text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl;
     resize: none;
   }
 
-  .field-setting textarea::-webkit-scrollbar {
+  /* .field-setting textarea::-webkit-scrollbar {
     display: none;
     white-space: none;
-  }
+  } */
 
   .field-setting svg {
-    @apply h-12 ml-auto shrink-0 w-min hover:rounded-xl hover:bg-slate-300;
+    @apply h-10 ml-auto self-center shrink-0 w-10 hover:rounded-xl hover:bg-slate-300;
   }
 
   .type-selector {
-    @apply rounded-full text-center h-10 self-center pb-1 ml-auto outline-none text-white px-2;
+    @apply rounded-full text-center h-10 self-center pb-1 ml-2 outline-none text-white px-2 text-sm sm:text-base;
     -moz-appearance: none;
     -webkit-appearance: none;
   }
@@ -126,7 +127,8 @@
   }
 
   .new-field-button {
-    @apply w-2/4 bg-white text-black self-center h-12 rounded-xl text-2xl;
+    width: 95%; 
+    @apply md:w-3/4 lg:w-2/3 xl:w-1/2 bg-white text-black self-center h-12 rounded-xl text-xl sm:text-2xl;
   }
 
   .new-field-button:hover {
