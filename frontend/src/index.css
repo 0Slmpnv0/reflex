@@ -134,4 +134,17 @@
   .new-field-button:hover {
     @apply bg-slate-200;
   }
+
+  .tag-wrapper {
+    @apply flex-col w-1/2 mx-auto
+  }
+
+  .tag-wrapper h1 {
+    @apply text-left text-2xl mt-5 mb-1;
+  }
+
+  .tag {
+    @apply flex text-black pl-2 text-2xl bg-white rounded-md w-full py-1;
+
+  }
 }
