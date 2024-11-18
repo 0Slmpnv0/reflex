@@ -4,6 +4,8 @@ import TagField from "../components/TagField";
 type Field = {
   name: string;
   type: "tag" | "number" | "checkbox" | "percent" | "unselected";
+  options?: string[];
+  answer: string;
   is_required?: boolean; // experimental. In future Ill support unrequired fields, but now idk how to make it not affect the Insights
   display: {
     is_display_field: boolean;
@@ -15,6 +17,8 @@ let example_form_data: { [key: string]: Field } = {
   1: {
     name: "How do I feel today?",
     type: "tag",
+    options: ['nice', 'cool', 'horrible', 'exiting'],
+    answer: '',
     display: {
       is_display_field: false,
     },
@@ -22,6 +26,7 @@ let example_form_data: { [key: string]: Field } = {
   2: {
     name: "How many minutes did I exercise?",
     type: "number",
+    answer: '',
     display: {
       is_display_field: false,
     },
@@ -29,6 +34,7 @@ let example_form_data: { [key: string]: Field } = {
   3: {
     name: "Did I drink enough water?",
     type: "checkbox",
+    answer: '',
     display: {
       is_display_field: false,
     },
@@ -36,6 +42,7 @@ let example_form_data: { [key: string]: Field } = {
   4: {
     name: "What percentage of time was I productive?",
     type: "percent",
+    answer: '',
     display: {
       is_display_field: true,
     },
@@ -43,6 +50,7 @@ let example_form_data: { [key: string]: Field } = {
   5: {
     name: "Todays breakfast?",
     type: "tag",
+    answer: '',
     display: {
       is_display_field: false,
     },
@@ -60,7 +68,7 @@ export default function DailyReportPage() {
                         return (<TagField
                         name={fieldData.name}
                         current_option="unselected"
-                        options={['asdf', 'asdf']}
+                        options={fieldData.options? fieldData.options : []}
                         id={id}
                         />)
                     }
