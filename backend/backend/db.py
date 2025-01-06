@@ -42,19 +42,23 @@ class DB:
             return 500
 
     def get_user(self, uid):
+        ic("getting a user...")
         try:
             self.cursor.execute(
                 """--sql
-                SELECT user_id, username, login, field_settings FROM users WHERE user_id = %s;
+                SELECT user_id, login, username, field_settings FROM users WHERE user_id = %s;
             """,
                 (uid,),
             )
             ret = self.cursor.fetchone()
 
         except Exception as e:
+            self.connection.rollback()
             print(e)
-            return 500, ""
+            return 500, str(e)
 
+        if not ret:
+            return 404, "probably user does not exsist"
         self.connection.commit()
         return 200, ret
 
@@ -63,14 +67,17 @@ class DB:
             fields = field_settings if bool(field_settings) else None
             ic(type(field_settings))
             ic(type(fields))
+            ic(cached_password)
+            ic(login)
             self.cursor.execute(
                 """INSERT INTO users (username, login, cached_password, salt, field_settings) 
                 VALUES (%s, %s, %s, %s, %s)""",
                 (username, login, cached_password, salt, fields),
             )
         except Exception as e:
-            ic(e)
-            return 500, e
+            ic(str(e))
+            self.connection.rollback()
+            return 500, str(e)
 
         self.connection.commit()
 
@@ -84,6 +91,7 @@ class DB:
                 (user_id, report),
             )
         except Exception as e:
+            self.connection.rollback()
             print(e)
             return 500
         self.connection.commit()
@@ -92,30 +100,46 @@ class DB:
 
     def check_login(self, login):
         try:
-            self.cursor.execute("""SELECT 1 FROM users WHERE login = %s""", (login,))
-            return 200, not bool(self.cursor.fetchone())
+            self.cursor.execute(
+                """SELECT 1 
+            FROM users 
+            WHERE login = %s""",
+                (login,),
+            )
+            return 200, str(self.cursor.fetchone()) == "(1,)"
         except Error as e:
+            self.connection.rollback()
             print(e)
             return 500, ""
 
     def get_salt(self, login):
+
         try:
             self.cursor.execute("""SELECT salt FROM users WHERE login = %s""", (login,))
             return 200, self.cursor.fetchone()[0]
         except Error as e:
+            self.connection.rollback()
             print(e)
             return 500, ""
 
-    def check_password(self, cached_password, login):
+    def check_password(self, login, cached_password):
         try:
-            self.cursor.execute(
-                """--sql SELECT 1 FROM users WHERE login = %s AND cached_password = %s""",
-                (
-                    login,
-                    cached_password,
-                ),
-            )
-            return 200, bool(self.cursor.fetchone())
+            query = """
+                SELECT 1 
+                FROM users 
+                WHERE login = %s AND cached_password = %s
+            """
+            ic(login, cached_password)
+            self.cursor.execute(query, (login, cached_password))
+
+            result = self.cursor.fetchone()
+            ic(str(result))
+            return 200, str(result) == "(1,)"
+
         except Exception as e:
-            print(e)
-            return 500
+            self.connection.rollback()
+            ic(e)
+            return 500, False
+
+
+db = DB(PG_CONNECT_DATA)

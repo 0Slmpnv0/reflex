@@ -1,19 +1,22 @@
 services:
   backend:
     build: ./backend
+    command: poetry run fastapi run main.py --port 8000
     ports:
       - "8000:8000"
     depends_on:
       db:
         restart: true
-        condition: service_started
+        condition: service_healthy
   db:
     image: postgres
     hostname: pg
-    environment:
-      POSTGRES_USER: ${PG_USER}
-      POSTGRES_DB: test
-      POSTGRES_PASSWORD: ${PG_PASSWORD}
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 20s
+      retries: 5
+      start_period: 7s
+
     volumes:
       - db-data:/var/lib/postgresql/data
 
