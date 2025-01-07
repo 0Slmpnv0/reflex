@@ -98,7 +98,7 @@
   }
 
   .field-setting {
-    width: 95%; 
+    width: 95%;
     @apply flex md:w-3/4 lg:w-2/3 xl:w-1/2 text-black self-center h-12 rounded-xl px-1 text-2xl bg-white;
   }
 
@@ -127,11 +127,32 @@
   }
 
   .new-field-button {
-    width: 95%; 
+    width: 95%;
     @apply md:w-3/4 lg:w-2/3 xl:w-1/2 bg-white text-black self-center h-12 rounded-xl text-xl sm:text-2xl;
   }
 
   .new-field-button:hover {
     @apply bg-slate-200;
+  }
+
+  .tag-wrapper {
+    @apply flex-col w-1/2 mx-auto;
+  }
+
+  .tag-wrapper h1 {
+    @apply text-left text-2xl mt-5 mb-1;
+  }
+
+  .tag {
+    @apply flex text-black px-2 text-2xl bg-white rounded-md w-full py-1;
+  }
+
+  .option {
+    @apply rounded-xl;
+    @apply hover:bg-slate-300;
+  }
+
+  .current {
+    @apply bg-green-400;
   }
 }

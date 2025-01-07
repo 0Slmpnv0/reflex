@@ -10,7 +10,7 @@ export default function Nav() {
         >
           change <br /> form
         </a>
-        <a href="" className="nav-item">
+        <a href="http://localhost:1488/daily_report" className="nav-item">
           How was <br />your day?
         </a>
       </div>

@@ -6,6 +6,7 @@ import ManageFormPage from "./pages/ManageFormPage.tsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import RegisterPage from "./pages/RegisterPage.tsx";
+import DailyReportPage from "./pages/DailyReportPage.tsx";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
     path: "manage_form",
     element: <ManageFormPage />,
   },
+  {
+    path: "daily_report",
+    element: <DailyReportPage />
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
