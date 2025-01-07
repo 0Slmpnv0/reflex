@@ -1,11 +1,14 @@
 from fastapi import APIRouter, Response
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 import hashlib
 import random
 from string import ascii_letters
 from icecream import ic
 from db import db
 from typing import Optional, Dict
+from redis_db import redis
+import secrets
+from fastapi.responses import JSONResponse
 
 
 def gen_salt():
@@ -27,7 +30,6 @@ class User(BaseModel):
     login: str
     username: str
     password: str
-    field_settings: FieldSettings | None
 
 
 users = APIRouter(prefix="/users")
@@ -40,9 +42,7 @@ def new_user(user: User, response: Response):
     str_to_hash = user.password + salt
 
     password = hashlib.sha256(str_to_hash.encode(encoding="UTF-8")).hexdigest()
-    status, result = db.add_user(
-        user.username, user.login, password, salt, user.field_settings
-    )
+    status, result = db.add_user(user.username, user.login, password, salt)
     return {"status": status, "result": result}
 
 
@@ -81,4 +81,20 @@ def auth_a_user(login, password):
     status, result = db.check_password(login, password)
     if status == 500:
         return {"status": 500}
-    return {"status": status, "result": result}
+
+    resp = JSONResponse({"status": status, "result": result})
+    status, ret = db.get_user_id(login)
+    if status != 200:
+        return 500, ret
+    user_id = ret
+    if not redis.exists(f"{user_id}_session_key"):
+        session_token = secrets.token_hex(16)
+        ic("session", session_token)
+        resp.set_cookie(key=f"{user_id}_session_key", value=session_token)
+        ic("still ok")
+        try:
+            redis.set(f"{user_id}_session_key", session_token, ex=20 * 86400)
+        except Exception as e:
+            ic(e)
+
+    return resp
