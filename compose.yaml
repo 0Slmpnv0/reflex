@@ -13,9 +13,9 @@ services:
     hostname: pg
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
-      interval: 20s
-      retries: 5
-      start_period: 7s
+      interval: 3s
+      retries: 10
+      start_period: 3s
 
     volumes:
       - db-data:/var/lib/postgresql/data

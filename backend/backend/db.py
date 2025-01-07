@@ -41,6 +41,8 @@ class DB:
             print(e)
             return 500
 
+    # users related querys
+
     def get_user(self, uid):
         ic("getting a user...")
         try:
@@ -140,6 +142,18 @@ class DB:
             self.connection.rollback()
             ic(e)
             return 500, False
+
+    # form related querys
+
+    def get_field_settings(self, user_id):
+        try:
+            self.cursor.execute(
+                """SELECT field_settings FROM users WHERE user_id = %s""", (user_id,)
+            )
+            return 200, self.cursor.fetchone()
+        except Exception as e:
+            ic(e)
+            return 500, str(e)
 
 
 db = DB(PG_CONNECT_DATA)

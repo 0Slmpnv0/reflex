@@ -5,6 +5,7 @@ import random
 from string import ascii_letters
 from icecream import ic
 from db import db
+from typing import Optional, Dict
 
 
 def gen_salt():
@@ -15,11 +16,18 @@ def gen_salt():
     return salt
 
 
+class FieldSettings(BaseModel):
+    name: str
+    type: str
+    options: Optional[list[str]]
+    display: Dict[str, bool]
+
+
 class User(BaseModel):
     login: str
     username: str
     password: str
-    field_settings: dict | None = None
+    field_settings: FieldSettings | None
 
 
 users = APIRouter(prefix="/users")
@@ -52,3 +60,25 @@ def debug_func_delete_later(user_id: str):
         else res
     )
     return {"status": status, "response": user_data}
+
+
+@users.get("/validate_login")
+def validate_login(login):
+    ic(login)
+    status, result = db.check_login(login)
+    if status == 500:
+        return {status: 500}
+    return {"status": status, "availiable": not result}
+
+
+@users.post("/password_login")
+def auth_a_user(login, password):
+    status, salt = db.get_salt(login)
+    if status == 500:
+        return {"status": 500}
+    password += salt
+    password = hashlib.sha256(password.encode("UTF-8")).hexdigest()
+    status, result = db.check_password(login, password)
+    if status == 500:
+        return {"status": 500}
+    return {"status": status, "result": result}
