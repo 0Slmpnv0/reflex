@@ -119,14 +119,14 @@ class DB:
         try:
             self.cursor.execute("""SELECT salt FROM users WHERE login = %s""", (login,))
             return 200, self.cursor.fetchone()[0]
-        except Error as e:
+        except Exception as e:
             self.connection.rollback()
             print(e)
             return 500, ""
 
     def check_password(self, login, cached_password):
         try:
-            query = """
+            query = """--sql
                 SELECT 1 
                 FROM users 
                 WHERE login = %s AND cached_password = %s
@@ -142,6 +142,23 @@ class DB:
             self.connection.rollback()
             ic(e)
             return 500, False
+
+    def get_user_id(self, login):
+        try:
+            self.cursor.execute(
+                """--sql 
+                SELECT user_id 
+                FROM users 
+                WHERE login = %s""",
+                (login,),
+            )
+            ret = self.cursor.fetchone()
+            if not ret:
+                return 404, "Probably no such user"
+            return 200, ret[0]
+        except Exception as e:
+            ic(e)
+            return 500, str(e)
 
     # form related querys
 

@@ -1,19 +1,9 @@
 from fastapi import APIRouter, Response
 from pydantic import BaseModel
-import hashlib
-import random
-from string import ascii_letters
+from security import gen_salt, add_cookie
 from icecream import ic
 from db import db
 from typing import Optional, Dict
-
-
-def gen_salt():
-    letters = list(ascii_letters)
-    salt = ""
-    for _ in range(10):
-        salt += random.choice(letters)
-    return salt
 
 
 class FieldSettings(BaseModel):
@@ -27,7 +17,6 @@ class User(BaseModel):
     login: str
     username: str
     password: str
-    field_settings: FieldSettings | None
 
 
 users = APIRouter(prefix="/users")
@@ -40,9 +29,7 @@ def new_user(user: User, response: Response):
     str_to_hash = user.password + salt
 
     password = hashlib.sha256(str_to_hash.encode(encoding="UTF-8")).hexdigest()
-    status, result = db.add_user(
-        user.username, user.login, password, salt, user.field_settings
-    )
+    status, result = db.add_user(user.username, user.login, password, salt)
     return {"status": status, "result": result}
 
 
@@ -81,4 +68,17 @@ def auth_a_user(login, password):
     status, result = db.check_password(login, password)
     if status == 500:
         return {"status": 500}
-    return {"status": status, "result": result}
+
+    response = JSONResponse({"status": status, "result": result})
+    status, ret = db.get_user_id(login)
+    if status != 200:
+        return 500, ret
+    user_id = ret
+    if not redis.exists(f"{user_id}_session_key"):
+        status, resp = add_cookie(user_id)
+        if status == 200:
+            response.set_cookie(key="aurh_cookie", value=resp)
+            response.content = {"status": "200"}
+        else:
+            response.content = {"status": 500, "e": resp}
+    return response
