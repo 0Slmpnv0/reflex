@@ -1,16 +1,11 @@
 from fastapi import APIRouter, Response
 from pydantic import BaseModel
-from security import gen_salt, add_cookie
+from security import hash_a_password, add_cookie, compare_passwords
 from icecream import ic
 from db import db
 from typing import Optional, Dict
+from redis_db import redis
 
-
-class FieldSettings(BaseModel):
-    name: str
-    type: str
-    options: Optional[list[str]]
-    display: Dict[str, bool]
 
 
 class User(BaseModel):
@@ -24,17 +19,13 @@ users = APIRouter(prefix="/users")
 
 @users.post("/add_user")
 def new_user(user: User, response: Response):
-    global db
-    salt = gen_salt()
-    str_to_hash = user.password + salt
-
-    password = hashlib.sha256(str_to_hash.encode(encoding="UTF-8")).hexdigest()
+    password, salt = hash_a_password(user.password)
     status, result = db.add_user(user.username, user.login, password, salt)
     return {"status": status, "result": result}
 
 
 @users.get("/")
-def debug_func_delete_later(user_id: str):
+def get_user_data(user_id: str):  # dev func. Not for the prod!
     status, res = db.get_user(user_id)
     user_data = (
         {
@@ -60,25 +51,21 @@ def validate_login(login):
 
 @users.post("/password_login")
 def auth_a_user(login, password):
-    status, salt = db.get_salt(login)
-    if status == 500:
-        return {"status": 500}
-    password += salt
-    password = hashlib.sha256(password.encode("UTF-8")).hexdigest()
-    status, result = db.check_password(login, password)
-    if status == 500:
-        return {"status": 500}
 
-    response = JSONResponse({"status": status, "result": result})
-    status, ret = db.get_user_id(login)
+    if not compare_passwords(login, password):
+        return {"status": 403, "msg": "Forbidden! Wrong password"}
+
+    response = Response()
+    content = {"status": 200}
+    status, res = db.get_user_id(login)
     if status != 200:
-        return 500, ret
-    user_id = ret
+        return {"status": status, "msg": res}
+    user_id = res
     if not redis.exists(f"{user_id}_session_key"):
         status, resp = add_cookie(user_id)
         if status == 200:
-            response.set_cookie(key="aurh_cookie", value=resp)
-            response.content = {"status": "200"}
+            response.set_cookie(key="auth_cookie", value=resp)
         else:
             response.content = {"status": 500, "e": resp}
+    response.content = content
     return response
