@@ -64,41 +64,21 @@ class DB:
         self.connection.commit()
         return 200, ret
 
-    def add_user(self, username, login, cached_password, salt, field_settings=None):
+    def add_user(self, username, login, cached_password, salt):
         try:
-            fields = field_settings if bool(field_settings) else None
-            ic(type(field_settings))
-            ic(type(fields))
-            ic(cached_password)
-            ic(login)
             self.cursor.execute(
-                """INSERT INTO users (username, login, cached_password, salt, field_settings) 
-                VALUES (%s, %s, %s, %s, %s)""",
-                (username, login, cached_password, salt, fields),
+                """INSERT INTO users (username, login, cached_password, salt) 
+                VALUES (%s, %s, %s, %s)""",
+                (username, login, cached_password, salt),
             )
         except Exception as e:
-            ic(str(e))
+            ic(e)
             self.connection.rollback()
             return 500, str(e)
 
         self.connection.commit()
 
         return 200, "succeeded!"
-
-    def add_report(self, user_id, report):
-        try:
-            self.cursor.execute(
-                """INSERT INTO reps (user_id, report) 
-                VALUES (%s, %s)""",
-                (user_id, report),
-            )
-        except Exception as e:
-            self.connection.rollback()
-            print(e)
-            return 500
-        self.connection.commit()
-
-        return 200
 
     def check_login(self, login):
         try:
@@ -114,34 +94,18 @@ class DB:
             print(e)
             return 500, ""
 
-    def get_salt(self, login):
+    def get_password_data(self, login):
 
         try:
-            self.cursor.execute("""SELECT salt FROM users WHERE login = %s""", (login,))
-            return 200, self.cursor.fetchone()[0]
-        except Exception as e:
-            self.connection.rollback()
-            print(e)
-            return 500, ""
-
-    def check_password(self, login, cached_password):
-        try:
-            query = """--sql
-                SELECT 1 
-                FROM users 
-                WHERE login = %s AND cached_password = %s
-            """
-            ic(login, cached_password)
-            self.cursor.execute(query, (login, cached_password))
-
-            result = self.cursor.fetchone()
-            ic(str(result))
-            return 200, str(result) == "(1,)"
-
+            self.cursor.execute(
+                """SELECT cached_password, salt FROM users WHERE login = %s""", (login,)
+            )
+            res = self.cursor.fetchone()
+            return 200, (res[0], res[1])
         except Exception as e:
             self.connection.rollback()
             ic(e)
-            return 500, False
+            return 500, (str(e), "")
 
     def get_user_id(self, login):
         try:
@@ -162,6 +126,23 @@ class DB:
 
     # form related querys
 
+    def update_field_settings(self, user_id, new_settings):
+        try:
+            self.cursor.execute(
+                """--sql
+            UPDATE users
+            SET field_settings = %s
+            WHERE user_id = %s;
+             """,
+                (new_settings, user_id),
+            )
+
+            return 200, "succeeded!"
+        except Exception as e:
+            self.connection.rollback()
+            ic(e)
+            return 500, str(e)
+
     def get_field_settings(self, user_id):
         try:
             self.cursor.execute(
@@ -171,6 +152,21 @@ class DB:
         except Exception as e:
             ic(e)
             return 500, str(e)
+
+    def add_report(self, user_id, report):
+        try:
+            self.cursor.execute(
+                """INSERT INTO reps (user_id, report) 
+                VALUES (%s, %s)""",
+                (user_id, report),
+            )
+        except Exception as e:
+            self.connection.rollback()
+            print(e)
+            return 500
+        self.connection.commit()
+
+        return 200
 
 
 db = DB(PG_CONNECT_DATA)
