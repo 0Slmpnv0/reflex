@@ -102,6 +102,7 @@ class DB:
             )
             res = self.cursor.fetchone()
             return 200, (res[0], res[1])
+
         except Exception as e:
             self.connection.rollback()
             ic(e)
@@ -112,6 +113,7 @@ class DB:
             self.cursor.execute(
                 """--sql 
                 SELECT user_id 
+
                 FROM users 
                 WHERE login = %s""",
                 (login,),
@@ -142,6 +144,7 @@ class DB:
             self.connection.rollback()
             ic(e)
             return 500, str(e)
+
 
     def get_field_settings(self, user_id):
         try:
