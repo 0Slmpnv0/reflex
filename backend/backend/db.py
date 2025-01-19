@@ -113,7 +113,6 @@ class DB:
             self.cursor.execute(
                 """--sql 
                 SELECT user_id 
-
                 FROM users 
                 WHERE login = %s""",
                 (login,),
@@ -127,6 +126,7 @@ class DB:
             return 500, str(e)
 
     # form related querys
+
 
     def update_field_settings(self, user_id, new_settings):
         try:

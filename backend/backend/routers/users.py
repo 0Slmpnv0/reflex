@@ -7,7 +7,6 @@ from typing import Optional, Dict
 from redis_db import redis
 
 
-
 class User(BaseModel):
     login: str
     username: str

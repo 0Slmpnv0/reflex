@@ -2,7 +2,7 @@ export default function Nav() {
     return (
       <div className="nav">
         <a href="" className="nav-item">
-          calendar
+          calendar (coming soon)
         </a>
         <a
           href="http://localhost:1488/manage_form"
