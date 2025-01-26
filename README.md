@@ -1,7 +1,7 @@
 # Reflex
 Welcome to my first serious web project! The idea of the app is to provide you the platform to collect, store and analyse any info about your life
 
-The app you a form editor, where you can add up to five things, that you can track, and then explore the correlation between them. After the form is created, every day you come to the app, fill the fields and send a report. After some time the amount of data will become big enough to analyse and have some important* insights!
+The app gives you a form editor, where you can add up to five things, that you can track, and then explore the correlation between them. After the form is created, every day you come to the app, fill the fields and send a report. After some time the amount of data will become big enough to analyse and have some important* insights!
 
 _*or not so important. That's not my responsibility:)_
 
