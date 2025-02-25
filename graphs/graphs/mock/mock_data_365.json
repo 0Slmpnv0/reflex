@@ -1,0 +1,4017 @@
+[
+  {
+    "user_id": 1,
+    "date": "2023-01-01",
+    "report": {
+      "Mood": "nice",
+      "Excercise time?": 16,
+      "Enough water?": true,
+      "Productivity percentage": 3,
+      "Breakfast": "yogurt"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-01-02",
+    "report": {
+      "Mood": "horrible",
+      "Excercise time?": 119,
+      "Enough water?": false,
+      "Productivity percentage": 1,
+      "Breakfast": "toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-01-03",
+    "report": {
+      "Mood": "cool",
+      "Excercise time?": 69,
+      "Enough water?": false,
+      "Productivity percentage": 90,
+      "Breakfast": "smoothie"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-01-04",
+    "report": {
+      "Mood": "cool",
+      "Excercise time?": 84,
+      "Enough water?": true,
+      "Productivity percentage": 49,
+      "Breakfast": "pancakes"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-01-05",
+    "report": {
+      "Mood": "horrible",
+      "Excercise time?": 95,
+      "Enough water?": false,
+      "Productivity percentage": 34,
+      "Breakfast": "toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-01-06",
+    "report": {
+      "Mood": "cool",
+      "Excercise time?": 16,
+      "Enough water?": true,
+      "Productivity percentage": 51,
+      "Breakfast": "pancakes"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-01-07",
+    "report": {
+      "Mood": "horrible",
+      "Excercise time?": 47,
+      "Enough water?": false,
+      "Productivity percentage": 33,
+      "Breakfast": "toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-01-08",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 3,
+      "Enough water?": false,
+      "Productivity percentage": 23,
+      "Breakfast": "toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-01-09",
+    "report": {
+      "Mood": "nice",
+      "Excercise time?": 112,
+      "Enough water?": false,
+      "Productivity percentage": 63,
+      "Breakfast": "toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-01-10",
+    "report": {
+      "Mood": "cool",
+      "Excercise time?": 69,
+      "Enough water?": true,
+      "Productivity percentage": 59,
+      "Breakfast": "pancakes"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-01-11",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 103,
+      "Enough water?": true,
+      "Productivity percentage": 73,
+      "Breakfast": "pancakes"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-01-12",
+    "report": {
+      "Mood": "nice",
+      "Excercise time?": 115,
+      "Enough water?": true,
+      "Productivity percentage": 69,
+      "Breakfast": "toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-01-13",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 29,
+      "Enough water?": false,
+      "Productivity percentage": 76,
+      "Breakfast": "smoothie"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-01-14",
+    "report": {
+      "Mood": "cool",
+      "Excercise time?": 25,
+      "Enough water?": false,
+      "Productivity percentage": 99,
+      "Breakfast": "cereal"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-01-15",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 77,
+      "Enough water?": false,
+      "Productivity percentage": 37,
+      "Breakfast": "eggs"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-01-16",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 100,
+      "Enough water?": false,
+      "Productivity percentage": 77,
+      "Breakfast": "pancakes"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-01-17",
+    "report": {
+      "Mood": "cool",
+      "Excercise time?": 15,
+      "Enough water?": true,
+      "Productivity percentage": 95,
+      "Breakfast": "yogurt"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-01-18",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 116,
+      "Enough water?": true,
+      "Productivity percentage": 14,
+      "Breakfast": "cereal"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-01-19",
+    "report": {
+      "Mood": "horrible",
+      "Excercise time?": 34,
+      "Enough water?": false,
+      "Productivity percentage": 17,
+      "Breakfast": "smoothie"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-01-20",
+    "report": {
+      "Mood": "horrible",
+      "Excercise time?": 60,
+      "Enough water?": true,
+      "Productivity percentage": 47,
+      "Breakfast": "yogurt"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-01-21",
+    "report": {
+      "Mood": "tired",
+      "Excercise time?": 81,
+      "Enough water?": false,
+      "Productivity percentage": 80,
+      "Breakfast": "eggs"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-01-22",
+    "report": {
+      "Mood": "tired",
+      "Excercise time?": 87,
+      "Enough water?": true,
+      "Productivity percentage": 56,
+      "Breakfast": "toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-01-23",
+    "report": {
+      "Mood": "horrible",
+      "Excercise time?": 48,
+      "Enough water?": false,
+      "Productivity percentage": 37,
+      "Breakfast": "eggs"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-01-24",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 95,
+      "Enough water?": true,
+      "Productivity percentage": 51,
+      "Breakfast": "pancakes"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-01-25",
+    "report": {
+      "Mood": "cool",
+      "Excercise time?": 63,
+      "Enough water?": false,
+      "Productivity percentage": 89,
+      "Breakfast": "eggs"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-01-26",
+    "report": {
+      "Mood": "tired",
+      "Excercise time?": 14,
+      "Enough water?": true,
+      "Productivity percentage": 75,
+      "Breakfast": "omelette"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-01-27",
+    "report": {
+      "Mood": "motivated",
+      "Excercise time?": 79,
+      "Enough water?": false,
+      "Productivity percentage": 69,
+      "Breakfast": "eggs"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-01-28",
+    "report": {
+      "Mood": "cool",
+      "Excercise time?": 16,
+      "Enough water?": true,
+      "Productivity percentage": 34,
+      "Breakfast": "cereal"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-01-29",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 55,
+      "Enough water?": false,
+      "Productivity percentage": 97,
+      "Breakfast": "cereal"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-01-30",
+    "report": {
+      "Mood": "cool",
+      "Excercise time?": 59,
+      "Enough water?": true,
+      "Productivity percentage": 54,
+      "Breakfast": "eggs"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-01-31",
+    "report": {
+      "Mood": "motivated",
+      "Excercise time?": 28,
+      "Enough water?": true,
+      "Productivity percentage": 43,
+      "Breakfast": "yogurt"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-02-01",
+    "report": {
+      "Mood": "cool",
+      "Excercise time?": 92,
+      "Enough water?": false,
+      "Productivity percentage": 30,
+      "Breakfast": "eggs"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-02-02",
+    "report": {
+      "Mood": "cool",
+      "Excercise time?": 12,
+      "Enough water?": false,
+      "Productivity percentage": 86,
+      "Breakfast": "cereal"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-02-03",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 21,
+      "Enough water?": false,
+      "Productivity percentage": 51,
+      "Breakfast": "yogurt"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-02-04",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 45,
+      "Enough water?": false,
+      "Productivity percentage": 79,
+      "Breakfast": "toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-02-05",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 22,
+      "Enough water?": true,
+      "Productivity percentage": 26,
+      "Breakfast": "toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-02-06",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 102,
+      "Enough water?": false,
+      "Productivity percentage": 29,
+      "Breakfast": "toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-02-07",
+    "report": {
+      "Mood": "motivated",
+      "Excercise time?": 32,
+      "Enough water?": true,
+      "Productivity percentage": 57,
+      "Breakfast": "toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-02-08",
+    "report": {
+      "Mood": "nice",
+      "Excercise time?": 82,
+      "Enough water?": false,
+      "Productivity percentage": 82,
+      "Breakfast": "eggs"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-02-09",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 46,
+      "Enough water?": false,
+      "Productivity percentage": 19,
+      "Breakfast": "pancakes"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-02-10",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 16,
+      "Enough water?": true,
+      "Productivity percentage": 11,
+      "Breakfast": "smoothie"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-02-11",
+    "report": {
+      "Mood": "tired",
+      "Excercise time?": 5,
+      "Enough water?": true,
+      "Productivity percentage": 68,
+      "Breakfast": "pancakes"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-02-12",
+    "report": {
+      "Mood": "tired",
+      "Excercise time?": 60,
+      "Enough water?": true,
+      "Productivity percentage": 26,
+      "Breakfast": "omelette"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-02-13",
+    "report": {
+      "Mood": "motivated",
+      "Excercise time?": 63,
+      "Enough water?": false,
+      "Productivity percentage": 66,
+      "Breakfast": "omelette"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-02-14",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 99,
+      "Enough water?": false,
+      "Productivity percentage": 41,
+      "Breakfast": "cereal"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-02-15",
+    "report": {
+      "Mood": "anxious",
+      "Excercise time?": 83,
+      "Enough water?": false,
+      "Productivity percentage": 90,
+      "Breakfast": "pasta"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-02-16",
+    "report": {
+      "Mood": "cool",
+      "Excercise time?": 42,
+      "Enough water?": false,
+      "Productivity percentage": 21,
+      "Breakfast": "omelette"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-02-17",
+    "report": {
+      "Mood": "nice",
+      "Excercise time?": 107,
+      "Enough water?": false,
+      "Productivity percentage": 90,
+      "Breakfast": "pasta"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-02-18",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 89,
+      "Enough water?": true,
+      "Productivity percentage": 22,
+      "Breakfast": "omelette"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-02-19",
+    "report": {
+      "Mood": "nice",
+      "Excercise time?": 25,
+      "Enough water?": true,
+      "Productivity percentage": 34,
+      "Breakfast": "smoothie"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-02-20",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 79,
+      "Enough water?": true,
+      "Productivity percentage": 85,
+      "Breakfast": "pasta"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-02-21",
+    "report": {
+      "Mood": "tired",
+      "Excercise time?": 52,
+      "Enough water?": true,
+      "Productivity percentage": 50,
+      "Breakfast": "eggs"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-02-22",
+    "report": {
+      "Mood": "cool",
+      "Excercise time?": 31,
+      "Enough water?": true,
+      "Productivity percentage": 11,
+      "Breakfast": "sandwich"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-02-23",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 33,
+      "Enough water?": true,
+      "Productivity percentage": 68,
+      "Breakfast": "eggs"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-02-24",
+    "report": {
+      "Mood": "cool",
+      "Excercise time?": 23,
+      "Enough water?": false,
+      "Productivity percentage": 6,
+      "Breakfast": "eggs"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-02-25",
+    "report": {
+      "Mood": "cool",
+      "Excercise time?": 10,
+      "Enough water?": false,
+      "Productivity percentage": 77,
+      "Breakfast": "yogurt"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-02-26",
+    "report": {
+      "Mood": "nice",
+      "Excercise time?": 35,
+      "Enough water?": false,
+      "Productivity percentage": 8,
+      "Breakfast": "yogurt"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-02-27",
+    "report": {
+      "Mood": "horrible",
+      "Excercise time?": 18,
+      "Enough water?": false,
+      "Productivity percentage": 6,
+      "Breakfast": "toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-02-28",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 37,
+      "Enough water?": false,
+      "Productivity percentage": 57,
+      "Breakfast": "cereal"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-03-01",
+    "report": {
+      "Mood": "nice",
+      "Excercise time?": 67,
+      "Enough water?": true,
+      "Productivity percentage": 29,
+      "Breakfast": "pasta"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-03-02",
+    "report": {
+      "Mood": "relaxed",
+      "Excercise time?": 13,
+      "Enough water?": true,
+      "Productivity percentage": 31,
+      "Breakfast": "fruit salad"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-03-03",
+    "report": {
+      "Mood": "relaxed",
+      "Excercise time?": 1,
+      "Enough water?": false,
+      "Productivity percentage": 7,
+      "Breakfast": "pasta"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-03-04",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 32,
+      "Enough water?": false,
+      "Productivity percentage": 10,
+      "Breakfast": "cereal"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-03-05",
+    "report": {
+      "Mood": "horrible",
+      "Excercise time?": 58,
+      "Enough water?": false,
+      "Productivity percentage": 97,
+      "Breakfast": "cereal"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-03-06",
+    "report": {
+      "Mood": "motivated",
+      "Excercise time?": 20,
+      "Enough water?": true,
+      "Productivity percentage": 44,
+      "Breakfast": "toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-03-07",
+    "report": {
+      "Mood": "relaxed",
+      "Excercise time?": 89,
+      "Enough water?": true,
+      "Productivity percentage": 25,
+      "Breakfast": "omelette"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-03-08",
+    "report": {
+      "Mood": "relaxed",
+      "Excercise time?": 78,
+      "Enough water?": true,
+      "Productivity percentage": 51,
+      "Breakfast": "fruit salad"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-03-09",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 11,
+      "Enough water?": true,
+      "Productivity percentage": 83,
+      "Breakfast": "cereal"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-03-10",
+    "report": {
+      "Mood": "cool",
+      "Excercise time?": 107,
+      "Enough water?": true,
+      "Productivity percentage": 38,
+      "Breakfast": "cereal"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-03-11",
+    "report": {
+      "Mood": "tired",
+      "Excercise time?": 24,
+      "Enough water?": false,
+      "Productivity percentage": 99,
+      "Breakfast": "cereal"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-03-12",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 86,
+      "Enough water?": true,
+      "Productivity percentage": 4,
+      "Breakfast": "sandwich"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-03-13",
+    "report": {
+      "Mood": "horrible",
+      "Excercise time?": 117,
+      "Enough water?": false,
+      "Productivity percentage": 71,
+      "Breakfast": "smoothie"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-03-14",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 89,
+      "Enough water?": true,
+      "Productivity percentage": 57,
+      "Breakfast": "eggs"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-03-15",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 42,
+      "Enough water?": true,
+      "Productivity percentage": 53,
+      "Breakfast": "pasta"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-03-16",
+    "report": {
+      "Mood": "motivated",
+      "Excercise time?": 97,
+      "Enough water?": true,
+      "Productivity percentage": 13,
+      "Breakfast": "omelette"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-03-17",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 92,
+      "Enough water?": true,
+      "Productivity percentage": 87,
+      "Breakfast": "sandwich"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-03-18",
+    "report": {
+      "Mood": "tired",
+      "Excercise time?": 9,
+      "Enough water?": true,
+      "Productivity percentage": 14,
+      "Breakfast": "avocado toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-03-19",
+    "report": {
+      "Mood": "tired",
+      "Excercise time?": 116,
+      "Enough water?": true,
+      "Productivity percentage": 15,
+      "Breakfast": "pasta"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-03-20",
+    "report": {
+      "Mood": "tired",
+      "Excercise time?": 66,
+      "Enough water?": true,
+      "Productivity percentage": 20,
+      "Breakfast": "avocado toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-03-21",
+    "report": {
+      "Mood": "nice",
+      "Excercise time?": 93,
+      "Enough water?": false,
+      "Productivity percentage": 3,
+      "Breakfast": "avocado toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-03-22",
+    "report": {
+      "Mood": "motivated",
+      "Excercise time?": 118,
+      "Enough water?": true,
+      "Productivity percentage": 97,
+      "Breakfast": "fruit salad"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-03-23",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 36,
+      "Enough water?": true,
+      "Productivity percentage": 32,
+      "Breakfast": "omelette"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-03-24",
+    "report": {
+      "Mood": "nice",
+      "Excercise time?": 31,
+      "Enough water?": true,
+      "Productivity percentage": 59,
+      "Breakfast": "smoothie"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-03-25",
+    "report": {
+      "Mood": "relaxed",
+      "Excercise time?": 32,
+      "Enough water?": false,
+      "Productivity percentage": 70,
+      "Breakfast": "pasta"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-03-26",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 117,
+      "Enough water?": true,
+      "Productivity percentage": 34,
+      "Breakfast": "cereal"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-03-27",
+    "report": {
+      "Mood": "relaxed",
+      "Excercise time?": 27,
+      "Enough water?": true,
+      "Productivity percentage": 15,
+      "Breakfast": "sandwich"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-03-28",
+    "report": {
+      "Mood": "nice",
+      "Excercise time?": 16,
+      "Enough water?": false,
+      "Productivity percentage": 36,
+      "Breakfast": "eggs"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-03-29",
+    "report": {
+      "Mood": "anxious",
+      "Excercise time?": 118,
+      "Enough water?": false,
+      "Productivity percentage": 28,
+      "Breakfast": "yogurt"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-03-30",
+    "report": {
+      "Mood": "tired",
+      "Excercise time?": 101,
+      "Enough water?": false,
+      "Productivity percentage": 64,
+      "Breakfast": "pasta"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-03-31",
+    "report": {
+      "Mood": "nice",
+      "Excercise time?": 37,
+      "Enough water?": false,
+      "Productivity percentage": 39,
+      "Breakfast": "sandwich"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-04-01",
+    "report": {
+      "Mood": "focused",
+      "Excercise time?": 44,
+      "Enough water?": false,
+      "Productivity percentage": 64,
+      "Breakfast": "omelette"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-04-02",
+    "report": {
+      "Mood": "horrible",
+      "Excercise time?": 4,
+      "Enough water?": true,
+      "Productivity percentage": 93,
+      "Breakfast": "yogurt"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-04-03",
+    "report": {
+      "Mood": "cool",
+      "Excercise time?": 103,
+      "Enough water?": true,
+      "Productivity percentage": 89,
+      "Breakfast": "fruit salad"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-04-04",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 49,
+      "Enough water?": true,
+      "Productivity percentage": 58,
+      "Breakfast": "pancakes"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-04-05",
+    "report": {
+      "Mood": "anxious",
+      "Excercise time?": 91,
+      "Enough water?": false,
+      "Productivity percentage": 93,
+      "Breakfast": "fruit salad"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-04-06",
+    "report": {
+      "Mood": "relaxed",
+      "Excercise time?": 4,
+      "Enough water?": true,
+      "Productivity percentage": 95,
+      "Breakfast": "omelette"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-04-07",
+    "report": {
+      "Mood": "nice",
+      "Excercise time?": 92,
+      "Enough water?": true,
+      "Productivity percentage": 78,
+      "Breakfast": "avocado toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-04-08",
+    "report": {
+      "Mood": "cool",
+      "Excercise time?": 18,
+      "Enough water?": true,
+      "Productivity percentage": 37,
+      "Breakfast": "muffin"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-04-09",
+    "report": {
+      "Mood": "horrible",
+      "Excercise time?": 72,
+      "Enough water?": false,
+      "Productivity percentage": 6,
+      "Breakfast": "pasta"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-04-10",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 32,
+      "Enough water?": false,
+      "Productivity percentage": 72,
+      "Breakfast": "avocado toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-04-11",
+    "report": {
+      "Mood": "motivated",
+      "Excercise time?": 9,
+      "Enough water?": false,
+      "Productivity percentage": 79,
+      "Breakfast": "fruit salad"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-04-12",
+    "report": {
+      "Mood": "tired",
+      "Excercise time?": 22,
+      "Enough water?": true,
+      "Productivity percentage": 16,
+      "Breakfast": "toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-04-13",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 11,
+      "Enough water?": true,
+      "Productivity percentage": 71,
+      "Breakfast": "smoothie"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-04-14",
+    "report": {
+      "Mood": "anxious",
+      "Excercise time?": 16,
+      "Enough water?": true,
+      "Productivity percentage": 25,
+      "Breakfast": "sandwich"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-04-15",
+    "report": {
+      "Mood": "focused",
+      "Excercise time?": 88,
+      "Enough water?": false,
+      "Productivity percentage": 53,
+      "Breakfast": "eggs"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-04-16",
+    "report": {
+      "Mood": "anxious",
+      "Excercise time?": 93,
+      "Enough water?": false,
+      "Productivity percentage": 40,
+      "Breakfast": "sandwich"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-04-17",
+    "report": {
+      "Mood": "anxious",
+      "Excercise time?": 103,
+      "Enough water?": true,
+      "Productivity percentage": 66,
+      "Breakfast": "omelette"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-04-18",
+    "report": {
+      "Mood": "stressed",
+      "Excercise time?": 66,
+      "Enough water?": false,
+      "Productivity percentage": 49,
+      "Breakfast": "toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-04-19",
+    "report": {
+      "Mood": "horrible",
+      "Excercise time?": 88,
+      "Enough water?": false,
+      "Productivity percentage": 69,
+      "Breakfast": "yogurt"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-04-20",
+    "report": {
+      "Mood": "nice",
+      "Excercise time?": 43,
+      "Enough water?": true,
+      "Productivity percentage": 50,
+      "Breakfast": "fruit salad"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-04-21",
+    "report": {
+      "Mood": "stressed",
+      "Excercise time?": 42,
+      "Enough water?": true,
+      "Productivity percentage": 26,
+      "Breakfast": "granola"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-04-22",
+    "report": {
+      "Mood": "stressed",
+      "Excercise time?": 114,
+      "Enough water?": false,
+      "Productivity percentage": 86,
+      "Breakfast": "pasta"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-04-23",
+    "report": {
+      "Mood": "motivated",
+      "Excercise time?": 113,
+      "Enough water?": true,
+      "Productivity percentage": 43,
+      "Breakfast": "omelette"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-04-24",
+    "report": {
+      "Mood": "tired",
+      "Excercise time?": 33,
+      "Enough water?": false,
+      "Productivity percentage": 95,
+      "Breakfast": "smoothie"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-04-25",
+    "report": {
+      "Mood": "horrible",
+      "Excercise time?": 111,
+      "Enough water?": true,
+      "Productivity percentage": 12,
+      "Breakfast": "sandwich"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-04-26",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 103,
+      "Enough water?": false,
+      "Productivity percentage": 35,
+      "Breakfast": "fruit salad"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-04-27",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 28,
+      "Enough water?": true,
+      "Productivity percentage": 71,
+      "Breakfast": "fruit salad"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-04-28",
+    "report": {
+      "Mood": "anxious",
+      "Excercise time?": 32,
+      "Enough water?": true,
+      "Productivity percentage": 8,
+      "Breakfast": "toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-04-29",
+    "report": {
+      "Mood": "tired",
+      "Excercise time?": 120,
+      "Enough water?": false,
+      "Productivity percentage": 21,
+      "Breakfast": "omelette"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-04-30",
+    "report": {
+      "Mood": "cool",
+      "Excercise time?": 8,
+      "Enough water?": true,
+      "Productivity percentage": 22,
+      "Breakfast": "granola"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-05-01",
+    "report": {
+      "Mood": "focused",
+      "Excercise time?": 85,
+      "Enough water?": false,
+      "Productivity percentage": 29,
+      "Breakfast": "muffin"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-05-02",
+    "report": {
+      "Mood": "happy",
+      "Excercise time?": 12,
+      "Enough water?": true,
+      "Productivity percentage": 82,
+      "Breakfast": "eggs"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-05-03",
+    "report": {
+      "Mood": "nice",
+      "Excercise time?": 109,
+      "Enough water?": false,
+      "Productivity percentage": 68,
+      "Breakfast": "omelette"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-05-04",
+    "report": {
+      "Mood": "anxious",
+      "Excercise time?": 68,
+      "Enough water?": true,
+      "Productivity percentage": 71,
+      "Breakfast": "fruit salad"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-05-05",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 92,
+      "Enough water?": false,
+      "Productivity percentage": 19,
+      "Breakfast": "pasta"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-05-06",
+    "report": {
+      "Mood": "horrible",
+      "Excercise time?": 9,
+      "Enough water?": false,
+      "Productivity percentage": 100,
+      "Breakfast": "sandwich"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-05-07",
+    "report": {
+      "Mood": "anxious",
+      "Excercise time?": 89,
+      "Enough water?": false,
+      "Productivity percentage": 75,
+      "Breakfast": "yogurt"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-05-08",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 68,
+      "Enough water?": false,
+      "Productivity percentage": 26,
+      "Breakfast": "muffin"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-05-09",
+    "report": {
+      "Mood": "focused",
+      "Excercise time?": 104,
+      "Enough water?": true,
+      "Productivity percentage": 91,
+      "Breakfast": "eggs"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-05-10",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 48,
+      "Enough water?": false,
+      "Productivity percentage": 33,
+      "Breakfast": "pasta"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-05-11",
+    "report": {
+      "Mood": "happy",
+      "Excercise time?": 104,
+      "Enough water?": false,
+      "Productivity percentage": 56,
+      "Breakfast": "muffin"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-05-12",
+    "report": {
+      "Mood": "happy",
+      "Excercise time?": 89,
+      "Enough water?": true,
+      "Productivity percentage": 14,
+      "Breakfast": "sandwich"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-05-13",
+    "report": {
+      "Mood": "nice",
+      "Excercise time?": 89,
+      "Enough water?": true,
+      "Productivity percentage": 78,
+      "Breakfast": "smoothie"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-05-14",
+    "report": {
+      "Mood": "tired",
+      "Excercise time?": 19,
+      "Enough water?": false,
+      "Productivity percentage": 25,
+      "Breakfast": "pasta"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-05-15",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 27,
+      "Enough water?": false,
+      "Productivity percentage": 67,
+      "Breakfast": "granola"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-05-16",
+    "report": {
+      "Mood": "motivated",
+      "Excercise time?": 70,
+      "Enough water?": true,
+      "Productivity percentage": 83,
+      "Breakfast": "waffles"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-05-17",
+    "report": {
+      "Mood": "stressed",
+      "Excercise time?": 98,
+      "Enough water?": false,
+      "Productivity percentage": 89,
+      "Breakfast": "eggs"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-05-18",
+    "report": {
+      "Mood": "anxious",
+      "Excercise time?": 72,
+      "Enough water?": true,
+      "Productivity percentage": 8,
+      "Breakfast": "muffin"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-05-19",
+    "report": {
+      "Mood": "stressed",
+      "Excercise time?": 108,
+      "Enough water?": true,
+      "Productivity percentage": 32,
+      "Breakfast": "muffin"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-05-20",
+    "report": {
+      "Mood": "anxious",
+      "Excercise time?": 25,
+      "Enough water?": false,
+      "Productivity percentage": 30,
+      "Breakfast": "waffles"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-05-21",
+    "report": {
+      "Mood": "nice",
+      "Excercise time?": 27,
+      "Enough water?": false,
+      "Productivity percentage": 62,
+      "Breakfast": "muffin"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-05-22",
+    "report": {
+      "Mood": "cool",
+      "Excercise time?": 16,
+      "Enough water?": true,
+      "Productivity percentage": 23,
+      "Breakfast": "toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-05-23",
+    "report": {
+      "Mood": "anxious",
+      "Excercise time?": 85,
+      "Enough water?": false,
+      "Productivity percentage": 27,
+      "Breakfast": "sandwich"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-05-24",
+    "report": {
+      "Mood": "stressed",
+      "Excercise time?": 28,
+      "Enough water?": true,
+      "Productivity percentage": 63,
+      "Breakfast": "cereal"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-05-25",
+    "report": {
+      "Mood": "relaxed",
+      "Excercise time?": 74,
+      "Enough water?": true,
+      "Productivity percentage": 91,
+      "Breakfast": "fruit salad"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-05-26",
+    "report": {
+      "Mood": "anxious",
+      "Excercise time?": 100,
+      "Enough water?": false,
+      "Productivity percentage": 95,
+      "Breakfast": "toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-05-27",
+    "report": {
+      "Mood": "tired",
+      "Excercise time?": 73,
+      "Enough water?": false,
+      "Productivity percentage": 9,
+      "Breakfast": "omelette"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-05-28",
+    "report": {
+      "Mood": "focused",
+      "Excercise time?": 3,
+      "Enough water?": true,
+      "Productivity percentage": 10,
+      "Breakfast": "pasta"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-05-29",
+    "report": {
+      "Mood": "stressed",
+      "Excercise time?": 74,
+      "Enough water?": false,
+      "Productivity percentage": 20,
+      "Breakfast": "granola"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-05-30",
+    "report": {
+      "Mood": "cool",
+      "Excercise time?": 31,
+      "Enough water?": true,
+      "Productivity percentage": 10,
+      "Breakfast": "sandwich"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-05-31",
+    "report": {
+      "Mood": "relaxed",
+      "Excercise time?": 5,
+      "Enough water?": true,
+      "Productivity percentage": 81,
+      "Breakfast": "muffin"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-06-01",
+    "report": {
+      "Mood": "cool",
+      "Excercise time?": 53,
+      "Enough water?": false,
+      "Productivity percentage": 19,
+      "Breakfast": "smoothie"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-06-02",
+    "report": {
+      "Mood": "cool",
+      "Excercise time?": 5,
+      "Enough water?": true,
+      "Productivity percentage": 60,
+      "Breakfast": "omelette"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-06-03",
+    "report": {
+      "Mood": "nice",
+      "Excercise time?": 95,
+      "Enough water?": false,
+      "Productivity percentage": 53,
+      "Breakfast": "omelette"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-06-04",
+    "report": {
+      "Mood": "happy",
+      "Excercise time?": 75,
+      "Enough water?": true,
+      "Productivity percentage": 72,
+      "Breakfast": "pancakes"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-06-05",
+    "report": {
+      "Mood": "sad",
+      "Excercise time?": 68,
+      "Enough water?": true,
+      "Productivity percentage": 75,
+      "Breakfast": "pancakes"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-06-06",
+    "report": {
+      "Mood": "tired",
+      "Excercise time?": 32,
+      "Enough water?": true,
+      "Productivity percentage": 18,
+      "Breakfast": "fruit salad"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-06-07",
+    "report": {
+      "Mood": "tired",
+      "Excercise time?": 73,
+      "Enough water?": true,
+      "Productivity percentage": 54,
+      "Breakfast": "cereal"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-06-08",
+    "report": {
+      "Mood": "motivated",
+      "Excercise time?": 42,
+      "Enough water?": false,
+      "Productivity percentage": 46,
+      "Breakfast": "omelette"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-06-09",
+    "report": {
+      "Mood": "anxious",
+      "Excercise time?": 82,
+      "Enough water?": true,
+      "Productivity percentage": 81,
+      "Breakfast": "protein shake"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-06-10",
+    "report": {
+      "Mood": "horrible",
+      "Excercise time?": 69,
+      "Enough water?": true,
+      "Productivity percentage": 76,
+      "Breakfast": "avocado toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-06-11",
+    "report": {
+      "Mood": "relaxed",
+      "Excercise time?": 116,
+      "Enough water?": true,
+      "Productivity percentage": 57,
+      "Breakfast": "granola"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-06-12",
+    "report": {
+      "Mood": "anxious",
+      "Excercise time?": 3,
+      "Enough water?": false,
+      "Productivity percentage": 8,
+      "Breakfast": "pasta"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-06-13",
+    "report": {
+      "Mood": "energetic",
+      "Excercise time?": 103,
+      "Enough water?": true,
+      "Productivity percentage": 12,
+      "Breakfast": "banana pancakes"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-06-14",
+    "report": {
+      "Mood": "cool",
+      "Excercise time?": 86,
+      "Enough water?": true,
+      "Productivity percentage": 99,
+      "Breakfast": "avocado toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-06-15",
+    "report": {
+      "Mood": "tired",
+      "Excercise time?": 113,
+      "Enough water?": false,
+      "Productivity percentage": 55,
+      "Breakfast": "sandwich"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-06-16",
+    "report": {
+      "Mood": "cool",
+      "Excercise time?": 40,
+      "Enough water?": false,
+      "Productivity percentage": 42,
+      "Breakfast": "smoothie"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-06-17",
+    "report": {
+      "Mood": "cool",
+      "Excercise time?": 119,
+      "Enough water?": true,
+      "Productivity percentage": 27,
+      "Breakfast": "avocado toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-06-18",
+    "report": {
+      "Mood": "nice",
+      "Excercise time?": 33,
+      "Enough water?": true,
+      "Productivity percentage": 47,
+      "Breakfast": "granola"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-06-19",
+    "report": {
+      "Mood": "nice",
+      "Excercise time?": 44,
+      "Enough water?": true,
+      "Productivity percentage": 89,
+      "Breakfast": "pancakes"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-06-20",
+    "report": {
+      "Mood": "horrible",
+      "Excercise time?": 40,
+      "Enough water?": false,
+      "Productivity percentage": 66,
+      "Breakfast": "protein shake"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-06-21",
+    "report": {
+      "Mood": "anxious",
+      "Excercise time?": 54,
+      "Enough water?": false,
+      "Productivity percentage": 90,
+      "Breakfast": "waffles"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-06-22",
+    "report": {
+      "Mood": "energetic",
+      "Excercise time?": 99,
+      "Enough water?": false,
+      "Productivity percentage": 85,
+      "Breakfast": "toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-06-23",
+    "report": {
+      "Mood": "focused",
+      "Excercise time?": 2,
+      "Enough water?": true,
+      "Productivity percentage": 30,
+      "Breakfast": "protein shake"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-06-24",
+    "report": {
+      "Mood": "cool",
+      "Excercise time?": 99,
+      "Enough water?": false,
+      "Productivity percentage": 37,
+      "Breakfast": "granola"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-06-25",
+    "report": {
+      "Mood": "anxious",
+      "Excercise time?": 1,
+      "Enough water?": false,
+      "Productivity percentage": 30,
+      "Breakfast": "waffles"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-06-26",
+    "report": {
+      "Mood": "sad",
+      "Excercise time?": 33,
+      "Enough water?": false,
+      "Productivity percentage": 25,
+      "Breakfast": "sandwich"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-06-27",
+    "report": {
+      "Mood": "focused",
+      "Excercise time?": 60,
+      "Enough water?": false,
+      "Productivity percentage": 51,
+      "Breakfast": "cereal"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-06-28",
+    "report": {
+      "Mood": "energetic",
+      "Excercise time?": 24,
+      "Enough water?": false,
+      "Productivity percentage": 81,
+      "Breakfast": "avocado toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-06-29",
+    "report": {
+      "Mood": "stressed",
+      "Excercise time?": 102,
+      "Enough water?": true,
+      "Productivity percentage": 66,
+      "Breakfast": "toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-06-30",
+    "report": {
+      "Mood": "motivated",
+      "Excercise time?": 65,
+      "Enough water?": false,
+      "Productivity percentage": 76,
+      "Breakfast": "smoothie"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-07-01",
+    "report": {
+      "Mood": "sad",
+      "Excercise time?": 54,
+      "Enough water?": true,
+      "Productivity percentage": 46,
+      "Breakfast": "fruit salad"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-07-02",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 6,
+      "Enough water?": false,
+      "Productivity percentage": 55,
+      "Breakfast": "waffles"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-07-03",
+    "report": {
+      "Mood": "bored",
+      "Excercise time?": 15,
+      "Enough water?": true,
+      "Productivity percentage": 39,
+      "Breakfast": "toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-07-04",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 49,
+      "Enough water?": false,
+      "Productivity percentage": 52,
+      "Breakfast": "omelette"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-07-05",
+    "report": {
+      "Mood": "focused",
+      "Excercise time?": 7,
+      "Enough water?": true,
+      "Productivity percentage": 18,
+      "Breakfast": "pasta"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-07-06",
+    "report": {
+      "Mood": "anxious",
+      "Excercise time?": 93,
+      "Enough water?": false,
+      "Productivity percentage": 47,
+      "Breakfast": "waffles"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-07-07",
+    "report": {
+      "Mood": "focused",
+      "Excercise time?": 97,
+      "Enough water?": false,
+      "Productivity percentage": 60,
+      "Breakfast": "omelette"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-07-08",
+    "report": {
+      "Mood": "relaxed",
+      "Excercise time?": 93,
+      "Enough water?": false,
+      "Productivity percentage": 18,
+      "Breakfast": "omelette"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-07-09",
+    "report": {
+      "Mood": "energetic",
+      "Excercise time?": 106,
+      "Enough water?": true,
+      "Productivity percentage": 67,
+      "Breakfast": "eggs"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-07-10",
+    "report": {
+      "Mood": "nice",
+      "Excercise time?": 2,
+      "Enough water?": false,
+      "Productivity percentage": 73,
+      "Breakfast": "muffin"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-07-11",
+    "report": {
+      "Mood": "nice",
+      "Excercise time?": 38,
+      "Enough water?": false,
+      "Productivity percentage": 73,
+      "Breakfast": "granola"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-07-12",
+    "report": {
+      "Mood": "stressed",
+      "Excercise time?": 65,
+      "Enough water?": false,
+      "Productivity percentage": 46,
+      "Breakfast": "omelette"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-07-13",
+    "report": {
+      "Mood": "bored",
+      "Excercise time?": 63,
+      "Enough water?": true,
+      "Productivity percentage": 23,
+      "Breakfast": "yogurt"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-07-14",
+    "report": {
+      "Mood": "tired",
+      "Excercise time?": 48,
+      "Enough water?": true,
+      "Productivity percentage": 2,
+      "Breakfast": "muffin"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-07-15",
+    "report": {
+      "Mood": "nice",
+      "Excercise time?": 37,
+      "Enough water?": false,
+      "Productivity percentage": 58,
+      "Breakfast": "omelette"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-07-16",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 31,
+      "Enough water?": true,
+      "Productivity percentage": 38,
+      "Breakfast": "avocado toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-07-17",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 53,
+      "Enough water?": false,
+      "Productivity percentage": 67,
+      "Breakfast": "pasta"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-07-18",
+    "report": {
+      "Mood": "nice",
+      "Excercise time?": 9,
+      "Enough water?": false,
+      "Productivity percentage": 7,
+      "Breakfast": "toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-07-19",
+    "report": {
+      "Mood": "happy",
+      "Excercise time?": 108,
+      "Enough water?": true,
+      "Productivity percentage": 87,
+      "Breakfast": "toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-07-20",
+    "report": {
+      "Mood": "relaxed",
+      "Excercise time?": 37,
+      "Enough water?": true,
+      "Productivity percentage": 58,
+      "Breakfast": "fruit salad"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-07-21",
+    "report": {
+      "Mood": "bored",
+      "Excercise time?": 84,
+      "Enough water?": false,
+      "Productivity percentage": 30,
+      "Breakfast": "smoothie"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-07-22",
+    "report": {
+      "Mood": "cool",
+      "Excercise time?": 88,
+      "Enough water?": false,
+      "Productivity percentage": 78,
+      "Breakfast": "eggs"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-07-23",
+    "report": {
+      "Mood": "horrible",
+      "Excercise time?": 102,
+      "Enough water?": true,
+      "Productivity percentage": 48,
+      "Breakfast": "yogurt"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-07-24",
+    "report": {
+      "Mood": "relaxed",
+      "Excercise time?": 91,
+      "Enough water?": false,
+      "Productivity percentage": 82,
+      "Breakfast": "muffin"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-07-25",
+    "report": {
+      "Mood": "energetic",
+      "Excercise time?": 77,
+      "Enough water?": true,
+      "Productivity percentage": 58,
+      "Breakfast": "smoothie"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-07-26",
+    "report": {
+      "Mood": "bored",
+      "Excercise time?": 98,
+      "Enough water?": false,
+      "Productivity percentage": 96,
+      "Breakfast": "pancakes"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-07-27",
+    "report": {
+      "Mood": "motivated",
+      "Excercise time?": 3,
+      "Enough water?": false,
+      "Productivity percentage": 67,
+      "Breakfast": "protein shake"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-07-28",
+    "report": {
+      "Mood": "motivated",
+      "Excercise time?": 4,
+      "Enough water?": false,
+      "Productivity percentage": 90,
+      "Breakfast": "smoothie"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-07-29",
+    "report": {
+      "Mood": "bored",
+      "Excercise time?": 101,
+      "Enough water?": false,
+      "Productivity percentage": 70,
+      "Breakfast": "sandwich"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-07-30",
+    "report": {
+      "Mood": "horrible",
+      "Excercise time?": 78,
+      "Enough water?": false,
+      "Productivity percentage": 49,
+      "Breakfast": "fruit salad"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-07-31",
+    "report": {
+      "Mood": "tired",
+      "Excercise time?": 84,
+      "Enough water?": false,
+      "Productivity percentage": 40,
+      "Breakfast": "muffin"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-08-01",
+    "report": {
+      "Mood": "nice",
+      "Excercise time?": 20,
+      "Enough water?": true,
+      "Productivity percentage": 53,
+      "Breakfast": "toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-08-02",
+    "report": {
+      "Mood": "sad",
+      "Excercise time?": 94,
+      "Enough water?": true,
+      "Productivity percentage": 33,
+      "Breakfast": "waffles"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-08-03",
+    "report": {
+      "Mood": "bored",
+      "Excercise time?": 81,
+      "Enough water?": false,
+      "Productivity percentage": 79,
+      "Breakfast": "omelette"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-08-04",
+    "report": {
+      "Mood": "bored",
+      "Excercise time?": 65,
+      "Enough water?": true,
+      "Productivity percentage": 41,
+      "Breakfast": "avocado toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-08-05",
+    "report": {
+      "Mood": "confident",
+      "Excercise time?": 104,
+      "Enough water?": true,
+      "Productivity percentage": 6,
+      "Breakfast": "pasta"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-08-06",
+    "report": {
+      "Mood": "cool",
+      "Excercise time?": 40,
+      "Enough water?": false,
+      "Productivity percentage": 21,
+      "Breakfast": "avocado toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-08-07",
+    "report": {
+      "Mood": "focused",
+      "Excercise time?": 33,
+      "Enough water?": true,
+      "Productivity percentage": 9,
+      "Breakfast": "waffles"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-08-08",
+    "report": {
+      "Mood": "tired",
+      "Excercise time?": 53,
+      "Enough water?": false,
+      "Productivity percentage": 95,
+      "Breakfast": "waffles"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-08-09",
+    "report": {
+      "Mood": "motivated",
+      "Excercise time?": 56,
+      "Enough water?": true,
+      "Productivity percentage": 69,
+      "Breakfast": "pasta"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-08-10",
+    "report": {
+      "Mood": "energetic",
+      "Excercise time?": 21,
+      "Enough water?": true,
+      "Productivity percentage": 0,
+      "Breakfast": "avocado toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-08-11",
+    "report": {
+      "Mood": "confident",
+      "Excercise time?": 100,
+      "Enough water?": false,
+      "Productivity percentage": 39,
+      "Breakfast": "eggs"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-08-12",
+    "report": {
+      "Mood": "tired",
+      "Excercise time?": 58,
+      "Enough water?": true,
+      "Productivity percentage": 53,
+      "Breakfast": "pancakes"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-08-13",
+    "report": {
+      "Mood": "bored",
+      "Excercise time?": 80,
+      "Enough water?": true,
+      "Productivity percentage": 75,
+      "Breakfast": "granola"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-08-14",
+    "report": {
+      "Mood": "tired",
+      "Excercise time?": 62,
+      "Enough water?": true,
+      "Productivity percentage": 11,
+      "Breakfast": "avocado toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-08-15",
+    "report": {
+      "Mood": "confident",
+      "Excercise time?": 114,
+      "Enough water?": true,
+      "Productivity percentage": 87,
+      "Breakfast": "cereal"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-08-16",
+    "report": {
+      "Mood": "bored",
+      "Excercise time?": 32,
+      "Enough water?": true,
+      "Productivity percentage": 39,
+      "Breakfast": "banana pancakes"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-08-17",
+    "report": {
+      "Mood": "confident",
+      "Excercise time?": 112,
+      "Enough water?": true,
+      "Productivity percentage": 24,
+      "Breakfast": "granola"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-08-18",
+    "report": {
+      "Mood": "horrible",
+      "Excercise time?": 25,
+      "Enough water?": true,
+      "Productivity percentage": 71,
+      "Breakfast": "pancakes"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-08-19",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 79,
+      "Enough water?": false,
+      "Productivity percentage": 100,
+      "Breakfast": "cereal"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-08-20",
+    "report": {
+      "Mood": "horrible",
+      "Excercise time?": 81,
+      "Enough water?": false,
+      "Productivity percentage": 65,
+      "Breakfast": "muffin"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-08-21",
+    "report": {
+      "Mood": "motivated",
+      "Excercise time?": 40,
+      "Enough water?": false,
+      "Productivity percentage": 47,
+      "Breakfast": "eggs"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-08-22",
+    "report": {
+      "Mood": "energetic",
+      "Excercise time?": 68,
+      "Enough water?": true,
+      "Productivity percentage": 59,
+      "Breakfast": "protein shake"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-08-23",
+    "report": {
+      "Mood": "relaxed",
+      "Excercise time?": 77,
+      "Enough water?": true,
+      "Productivity percentage": 29,
+      "Breakfast": "banana pancakes"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-08-24",
+    "report": {
+      "Mood": "happy",
+      "Excercise time?": 88,
+      "Enough water?": false,
+      "Productivity percentage": 31,
+      "Breakfast": "avocado toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-08-25",
+    "report": {
+      "Mood": "tired",
+      "Excercise time?": 89,
+      "Enough water?": true,
+      "Productivity percentage": 1,
+      "Breakfast": "granola"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-08-26",
+    "report": {
+      "Mood": "cool",
+      "Excercise time?": 82,
+      "Enough water?": true,
+      "Productivity percentage": 88,
+      "Breakfast": "omelette"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-08-27",
+    "report": {
+      "Mood": "frustrated",
+      "Excercise time?": 37,
+      "Enough water?": false,
+      "Productivity percentage": 22,
+      "Breakfast": "avocado toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-08-28",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 7,
+      "Enough water?": true,
+      "Productivity percentage": 47,
+      "Breakfast": "granola"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-08-29",
+    "report": {
+      "Mood": "anxious",
+      "Excercise time?": 82,
+      "Enough water?": false,
+      "Productivity percentage": 14,
+      "Breakfast": "avocado toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-08-30",
+    "report": {
+      "Mood": "anxious",
+      "Excercise time?": 4,
+      "Enough water?": true,
+      "Productivity percentage": 13,
+      "Breakfast": "granola"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-08-31",
+    "report": {
+      "Mood": "motivated",
+      "Excercise time?": 49,
+      "Enough water?": true,
+      "Productivity percentage": 34,
+      "Breakfast": "cereal"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-09-01",
+    "report": {
+      "Mood": "nice",
+      "Excercise time?": 67,
+      "Enough water?": true,
+      "Productivity percentage": 43,
+      "Breakfast": "omelette"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-09-02",
+    "report": {
+      "Mood": "focused",
+      "Excercise time?": 84,
+      "Enough water?": true,
+      "Productivity percentage": 90,
+      "Breakfast": "pasta"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-09-03",
+    "report": {
+      "Mood": "stressed",
+      "Excercise time?": 41,
+      "Enough water?": false,
+      "Productivity percentage": 39,
+      "Breakfast": "avocado toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-09-04",
+    "report": {
+      "Mood": "focused",
+      "Excercise time?": 86,
+      "Enough water?": true,
+      "Productivity percentage": 44,
+      "Breakfast": "banana pancakes"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-09-05",
+    "report": {
+      "Mood": "nice",
+      "Excercise time?": 76,
+      "Enough water?": false,
+      "Productivity percentage": 72,
+      "Breakfast": "smoothie"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-09-06",
+    "report": {
+      "Mood": "nice",
+      "Excercise time?": 36,
+      "Enough water?": false,
+      "Productivity percentage": 49,
+      "Breakfast": "smoothie"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-09-07",
+    "report": {
+      "Mood": "focused",
+      "Excercise time?": 115,
+      "Enough water?": true,
+      "Productivity percentage": 96,
+      "Breakfast": "smoothie"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-09-08",
+    "report": {
+      "Mood": "sad",
+      "Excercise time?": 33,
+      "Enough water?": true,
+      "Productivity percentage": 52,
+      "Breakfast": "omelette"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-09-09",
+    "report": {
+      "Mood": "anxious",
+      "Excercise time?": 54,
+      "Enough water?": false,
+      "Productivity percentage": 6,
+      "Breakfast": "smoothie"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-09-10",
+    "report": {
+      "Mood": "nice",
+      "Excercise time?": 117,
+      "Enough water?": true,
+      "Productivity percentage": 91,
+      "Breakfast": "banana pancakes"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-09-11",
+    "report": {
+      "Mood": "nice",
+      "Excercise time?": 66,
+      "Enough water?": false,
+      "Productivity percentage": 83,
+      "Breakfast": "yogurt"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-09-12",
+    "report": {
+      "Mood": "energetic",
+      "Excercise time?": 84,
+      "Enough water?": true,
+      "Productivity percentage": 0,
+      "Breakfast": "cereal"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-09-13",
+    "report": {
+      "Mood": "motivated",
+      "Excercise time?": 28,
+      "Enough water?": false,
+      "Productivity percentage": 81,
+      "Breakfast": "avocado toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-09-14",
+    "report": {
+      "Mood": "horrible",
+      "Excercise time?": 92,
+      "Enough water?": true,
+      "Productivity percentage": 62,
+      "Breakfast": "pasta"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-09-15",
+    "report": {
+      "Mood": "tired",
+      "Excercise time?": 54,
+      "Enough water?": false,
+      "Productivity percentage": 2,
+      "Breakfast": "avocado toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-09-16",
+    "report": {
+      "Mood": "cool",
+      "Excercise time?": 82,
+      "Enough water?": true,
+      "Productivity percentage": 27,
+      "Breakfast": "sandwich"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-09-17",
+    "report": {
+      "Mood": "horrible",
+      "Excercise time?": 71,
+      "Enough water?": false,
+      "Productivity percentage": 14,
+      "Breakfast": "omelette"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-09-18",
+    "report": {
+      "Mood": "cool",
+      "Excercise time?": 82,
+      "Enough water?": true,
+      "Productivity percentage": 98,
+      "Breakfast": "toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-09-19",
+    "report": {
+      "Mood": "bored",
+      "Excercise time?": 1,
+      "Enough water?": true,
+      "Productivity percentage": 59,
+      "Breakfast": "banana pancakes"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-09-20",
+    "report": {
+      "Mood": "focused",
+      "Excercise time?": 41,
+      "Enough water?": false,
+      "Productivity percentage": 86,
+      "Breakfast": "cereal"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-09-21",
+    "report": {
+      "Mood": "nice",
+      "Excercise time?": 38,
+      "Enough water?": true,
+      "Productivity percentage": 26,
+      "Breakfast": "smoothie"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-09-22",
+    "report": {
+      "Mood": "motivated",
+      "Excercise time?": 50,
+      "Enough water?": true,
+      "Productivity percentage": 93,
+      "Breakfast": "avocado toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-09-23",
+    "report": {
+      "Mood": "frustrated",
+      "Excercise time?": 25,
+      "Enough water?": false,
+      "Productivity percentage": 60,
+      "Breakfast": "banana pancakes"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-09-24",
+    "report": {
+      "Mood": "focused",
+      "Excercise time?": 52,
+      "Enough water?": true,
+      "Productivity percentage": 48,
+      "Breakfast": "sandwich"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-09-25",
+    "report": {
+      "Mood": "focused",
+      "Excercise time?": 12,
+      "Enough water?": false,
+      "Productivity percentage": 41,
+      "Breakfast": "sandwich"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-09-26",
+    "report": {
+      "Mood": "happy",
+      "Excercise time?": 96,
+      "Enough water?": true,
+      "Productivity percentage": 35,
+      "Breakfast": "fruit salad"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-09-27",
+    "report": {
+      "Mood": "focused",
+      "Excercise time?": 4,
+      "Enough water?": true,
+      "Productivity percentage": 75,
+      "Breakfast": "smoothie"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-09-28",
+    "report": {
+      "Mood": "tired",
+      "Excercise time?": 26,
+      "Enough water?": false,
+      "Productivity percentage": 43,
+      "Breakfast": "pasta"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-09-29",
+    "report": {
+      "Mood": "relaxed",
+      "Excercise time?": 67,
+      "Enough water?": false,
+      "Productivity percentage": 100,
+      "Breakfast": "protein shake"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-09-30",
+    "report": {
+      "Mood": "cool",
+      "Excercise time?": 104,
+      "Enough water?": true,
+      "Productivity percentage": 55,
+      "Breakfast": "waffles"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-10-01",
+    "report": {
+      "Mood": "confident",
+      "Excercise time?": 19,
+      "Enough water?": false,
+      "Productivity percentage": 47,
+      "Breakfast": "toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-10-02",
+    "report": {
+      "Mood": "horrible",
+      "Excercise time?": 93,
+      "Enough water?": false,
+      "Productivity percentage": 87,
+      "Breakfast": "sandwich"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-10-03",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 13,
+      "Enough water?": false,
+      "Productivity percentage": 20,
+      "Breakfast": "pasta"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-10-04",
+    "report": {
+      "Mood": "confident",
+      "Excercise time?": 31,
+      "Enough water?": true,
+      "Productivity percentage": 26,
+      "Breakfast": "yogurt"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-10-05",
+    "report": {
+      "Mood": "energetic",
+      "Excercise time?": 3,
+      "Enough water?": true,
+      "Productivity percentage": 0,
+      "Breakfast": "fruit salad"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-10-06",
+    "report": {
+      "Mood": "happy",
+      "Excercise time?": 101,
+      "Enough water?": true,
+      "Productivity percentage": 33,
+      "Breakfast": "omelette"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-10-07",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 37,
+      "Enough water?": true,
+      "Productivity percentage": 59,
+      "Breakfast": "pancakes"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-10-08",
+    "report": {
+      "Mood": "stressed",
+      "Excercise time?": 97,
+      "Enough water?": false,
+      "Productivity percentage": 59,
+      "Breakfast": "toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-10-09",
+    "report": {
+      "Mood": "frustrated",
+      "Excercise time?": 103,
+      "Enough water?": true,
+      "Productivity percentage": 66,
+      "Breakfast": "fruit salad"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-10-10",
+    "report": {
+      "Mood": "focused",
+      "Excercise time?": 62,
+      "Enough water?": false,
+      "Productivity percentage": 15,
+      "Breakfast": "protein shake"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-10-11",
+    "report": {
+      "Mood": "nice",
+      "Excercise time?": 99,
+      "Enough water?": true,
+      "Productivity percentage": 39,
+      "Breakfast": "eggs"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-10-12",
+    "report": {
+      "Mood": "bored",
+      "Excercise time?": 36,
+      "Enough water?": true,
+      "Productivity percentage": 57,
+      "Breakfast": "smoothie"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-10-13",
+    "report": {
+      "Mood": "stressed",
+      "Excercise time?": 86,
+      "Enough water?": true,
+      "Productivity percentage": 64,
+      "Breakfast": "waffles"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-10-14",
+    "report": {
+      "Mood": "relaxed",
+      "Excercise time?": 52,
+      "Enough water?": true,
+      "Productivity percentage": 55,
+      "Breakfast": "pancakes"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-10-15",
+    "report": {
+      "Mood": "nice",
+      "Excercise time?": 81,
+      "Enough water?": false,
+      "Productivity percentage": 13,
+      "Breakfast": "toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-10-16",
+    "report": {
+      "Mood": "anxious",
+      "Excercise time?": 23,
+      "Enough water?": false,
+      "Productivity percentage": 44,
+      "Breakfast": "waffles"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-10-17",
+    "report": {
+      "Mood": "bored",
+      "Excercise time?": 54,
+      "Enough water?": false,
+      "Productivity percentage": 58,
+      "Breakfast": "yogurt"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-10-18",
+    "report": {
+      "Mood": "confident",
+      "Excercise time?": 118,
+      "Enough water?": true,
+      "Productivity percentage": 32,
+      "Breakfast": "protein shake"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-10-19",
+    "report": {
+      "Mood": "cool",
+      "Excercise time?": 49,
+      "Enough water?": true,
+      "Productivity percentage": 0,
+      "Breakfast": "muffin"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-10-20",
+    "report": {
+      "Mood": "confident",
+      "Excercise time?": 110,
+      "Enough water?": true,
+      "Productivity percentage": 15,
+      "Breakfast": "muffin"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-10-21",
+    "report": {
+      "Mood": "bored",
+      "Excercise time?": 12,
+      "Enough water?": false,
+      "Productivity percentage": 69,
+      "Breakfast": "protein shake"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-10-22",
+    "report": {
+      "Mood": "energetic",
+      "Excercise time?": 110,
+      "Enough water?": false,
+      "Productivity percentage": 6,
+      "Breakfast": "yogurt"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-10-23",
+    "report": {
+      "Mood": "focused",
+      "Excercise time?": 3,
+      "Enough water?": false,
+      "Productivity percentage": 38,
+      "Breakfast": "yogurt"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-10-24",
+    "report": {
+      "Mood": "frustrated",
+      "Excercise time?": 60,
+      "Enough water?": true,
+      "Productivity percentage": 80,
+      "Breakfast": "sandwich"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-10-25",
+    "report": {
+      "Mood": "stressed",
+      "Excercise time?": 48,
+      "Enough water?": false,
+      "Productivity percentage": 85,
+      "Breakfast": "omelette"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-10-26",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 46,
+      "Enough water?": true,
+      "Productivity percentage": 41,
+      "Breakfast": "smoothie"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-10-27",
+    "report": {
+      "Mood": "stressed",
+      "Excercise time?": 4,
+      "Enough water?": true,
+      "Productivity percentage": 52,
+      "Breakfast": "pasta"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-10-28",
+    "report": {
+      "Mood": "stressed",
+      "Excercise time?": 96,
+      "Enough water?": false,
+      "Productivity percentage": 28,
+      "Breakfast": "smoothie"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-10-29",
+    "report": {
+      "Mood": "bored",
+      "Excercise time?": 18,
+      "Enough water?": true,
+      "Productivity percentage": 95,
+      "Breakfast": "banana pancakes"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-10-30",
+    "report": {
+      "Mood": "confident",
+      "Excercise time?": 99,
+      "Enough water?": false,
+      "Productivity percentage": 69,
+      "Breakfast": "granola"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-10-31",
+    "report": {
+      "Mood": "energetic",
+      "Excercise time?": 119,
+      "Enough water?": false,
+      "Productivity percentage": 46,
+      "Breakfast": "protein shake"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-11-01",
+    "report": {
+      "Mood": "stressed",
+      "Excercise time?": 50,
+      "Enough water?": false,
+      "Productivity percentage": 67,
+      "Breakfast": "banana pancakes"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-11-02",
+    "report": {
+      "Mood": "horrible",
+      "Excercise time?": 18,
+      "Enough water?": true,
+      "Productivity percentage": 98,
+      "Breakfast": "eggs"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-11-03",
+    "report": {
+      "Mood": "relaxed",
+      "Excercise time?": 60,
+      "Enough water?": false,
+      "Productivity percentage": 49,
+      "Breakfast": "banana pancakes"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-11-04",
+    "report": {
+      "Mood": "tired",
+      "Excercise time?": 21,
+      "Enough water?": false,
+      "Productivity percentage": 61,
+      "Breakfast": "sandwich"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-11-05",
+    "report": {
+      "Mood": "focused",
+      "Excercise time?": 95,
+      "Enough water?": true,
+      "Productivity percentage": 74,
+      "Breakfast": "protein shake"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-11-06",
+    "report": {
+      "Mood": "relaxed",
+      "Excercise time?": 52,
+      "Enough water?": true,
+      "Productivity percentage": 3,
+      "Breakfast": "omelette"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-11-07",
+    "report": {
+      "Mood": "nice",
+      "Excercise time?": 53,
+      "Enough water?": true,
+      "Productivity percentage": 27,
+      "Breakfast": "waffles"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-11-08",
+    "report": {
+      "Mood": "frustrated",
+      "Excercise time?": 33,
+      "Enough water?": false,
+      "Productivity percentage": 54,
+      "Breakfast": "banana pancakes"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-11-09",
+    "report": {
+      "Mood": "bored",
+      "Excercise time?": 8,
+      "Enough water?": true,
+      "Productivity percentage": 76,
+      "Breakfast": "cereal"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-11-10",
+    "report": {
+      "Mood": "motivated",
+      "Excercise time?": 62,
+      "Enough water?": false,
+      "Productivity percentage": 61,
+      "Breakfast": "smoothie"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-11-11",
+    "report": {
+      "Mood": "energetic",
+      "Excercise time?": 78,
+      "Enough water?": false,
+      "Productivity percentage": 19,
+      "Breakfast": "pasta"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-11-12",
+    "report": {
+      "Mood": "nice",
+      "Excercise time?": 87,
+      "Enough water?": true,
+      "Productivity percentage": 80,
+      "Breakfast": "eggs"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-11-13",
+    "report": {
+      "Mood": "horrible",
+      "Excercise time?": 52,
+      "Enough water?": true,
+      "Productivity percentage": 48,
+      "Breakfast": "omelette"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-11-14",
+    "report": {
+      "Mood": "bored",
+      "Excercise time?": 43,
+      "Enough water?": true,
+      "Productivity percentage": 90,
+      "Breakfast": "muffin"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-11-15",
+    "report": {
+      "Mood": "tired",
+      "Excercise time?": 46,
+      "Enough water?": true,
+      "Productivity percentage": 18,
+      "Breakfast": "omelette"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-11-16",
+    "report": {
+      "Mood": "focused",
+      "Excercise time?": 34,
+      "Enough water?": false,
+      "Productivity percentage": 55,
+      "Breakfast": "avocado toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-11-17",
+    "report": {
+      "Mood": "anxious",
+      "Excercise time?": 9,
+      "Enough water?": true,
+      "Productivity percentage": 55,
+      "Breakfast": "protein shake"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-11-18",
+    "report": {
+      "Mood": "cool",
+      "Excercise time?": 55,
+      "Enough water?": true,
+      "Productivity percentage": 27,
+      "Breakfast": "yogurt"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-11-19",
+    "report": {
+      "Mood": "focused",
+      "Excercise time?": 65,
+      "Enough water?": false,
+      "Productivity percentage": 10,
+      "Breakfast": "waffles"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-11-20",
+    "report": {
+      "Mood": "confident",
+      "Excercise time?": 95,
+      "Enough water?": false,
+      "Productivity percentage": 94,
+      "Breakfast": "cereal"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-11-21",
+    "report": {
+      "Mood": "sad",
+      "Excercise time?": 76,
+      "Enough water?": true,
+      "Productivity percentage": 52,
+      "Breakfast": "granola"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-11-22",
+    "report": {
+      "Mood": "nice",
+      "Excercise time?": 6,
+      "Enough water?": true,
+      "Productivity percentage": 93,
+      "Breakfast": "pasta"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-11-23",
+    "report": {
+      "Mood": "sad",
+      "Excercise time?": 37,
+      "Enough water?": false,
+      "Productivity percentage": 41,
+      "Breakfast": "omelette"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-11-24",
+    "report": {
+      "Mood": "anxious",
+      "Excercise time?": 93,
+      "Enough water?": true,
+      "Productivity percentage": 6,
+      "Breakfast": "fruit salad"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-11-25",
+    "report": {
+      "Mood": "motivated",
+      "Excercise time?": 115,
+      "Enough water?": false,
+      "Productivity percentage": 58,
+      "Breakfast": "toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-11-26",
+    "report": {
+      "Mood": "relaxed",
+      "Excercise time?": 64,
+      "Enough water?": false,
+      "Productivity percentage": 41,
+      "Breakfast": "granola"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-11-27",
+    "report": {
+      "Mood": "horrible",
+      "Excercise time?": 100,
+      "Enough water?": true,
+      "Productivity percentage": 48,
+      "Breakfast": "protein shake"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-11-28",
+    "report": {
+      "Mood": "anxious",
+      "Excercise time?": 93,
+      "Enough water?": false,
+      "Productivity percentage": 87,
+      "Breakfast": "toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-11-29",
+    "report": {
+      "Mood": "frustrated",
+      "Excercise time?": 41,
+      "Enough water?": true,
+      "Productivity percentage": 47,
+      "Breakfast": "yogurt"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-11-30",
+    "report": {
+      "Mood": "sad",
+      "Excercise time?": 66,
+      "Enough water?": false,
+      "Productivity percentage": 43,
+      "Breakfast": "eggs"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-12-01",
+    "report": {
+      "Mood": "sad",
+      "Excercise time?": 40,
+      "Enough water?": false,
+      "Productivity percentage": 15,
+      "Breakfast": "waffles"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-12-02",
+    "report": {
+      "Mood": "sad",
+      "Excercise time?": 19,
+      "Enough water?": true,
+      "Productivity percentage": 32,
+      "Breakfast": "cereal"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-12-03",
+    "report": {
+      "Mood": "anxious",
+      "Excercise time?": 44,
+      "Enough water?": true,
+      "Productivity percentage": 27,
+      "Breakfast": "sandwich"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-12-04",
+    "report": {
+      "Mood": "sad",
+      "Excercise time?": 111,
+      "Enough water?": false,
+      "Productivity percentage": 69,
+      "Breakfast": "pasta"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-12-05",
+    "report": {
+      "Mood": "bored",
+      "Excercise time?": 2,
+      "Enough water?": false,
+      "Productivity percentage": 87,
+      "Breakfast": "muffin"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-12-06",
+    "report": {
+      "Mood": "nice",
+      "Excercise time?": 87,
+      "Enough water?": false,
+      "Productivity percentage": 59,
+      "Breakfast": "protein shake"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-12-07",
+    "report": {
+      "Mood": "cool",
+      "Excercise time?": 82,
+      "Enough water?": true,
+      "Productivity percentage": 98,
+      "Breakfast": "cereal"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-12-08",
+    "report": {
+      "Mood": "horrible",
+      "Excercise time?": 96,
+      "Enough water?": false,
+      "Productivity percentage": 62,
+      "Breakfast": "omelette"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-12-09",
+    "report": {
+      "Mood": "energetic",
+      "Excercise time?": 58,
+      "Enough water?": false,
+      "Productivity percentage": 58,
+      "Breakfast": "sandwich"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-12-10",
+    "report": {
+      "Mood": "frustrated",
+      "Excercise time?": 94,
+      "Enough water?": false,
+      "Productivity percentage": 77,
+      "Breakfast": "muffin"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-12-11",
+    "report": {
+      "Mood": "happy",
+      "Excercise time?": 119,
+      "Enough water?": true,
+      "Productivity percentage": 19,
+      "Breakfast": "eggs"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-12-12",
+    "report": {
+      "Mood": "horrible",
+      "Excercise time?": 52,
+      "Enough water?": true,
+      "Productivity percentage": 67,
+      "Breakfast": "avocado toast"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-12-13",
+    "report": {
+      "Mood": "relaxed",
+      "Excercise time?": 106,
+      "Enough water?": true,
+      "Productivity percentage": 48,
+      "Breakfast": "eggs"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-12-14",
+    "report": {
+      "Mood": "focused",
+      "Excercise time?": 53,
+      "Enough water?": false,
+      "Productivity percentage": 4,
+      "Breakfast": "waffles"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-12-15",
+    "report": {
+      "Mood": "tired",
+      "Excercise time?": 39,
+      "Enough water?": true,
+      "Productivity percentage": 77,
+      "Breakfast": "cereal"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-12-16",
+    "report": {
+      "Mood": "energetic",
+      "Excercise time?": 92,
+      "Enough water?": false,
+      "Productivity percentage": 60,
+      "Breakfast": "omelette"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-12-17",
+    "report": {
+      "Mood": "sad",
+      "Excercise time?": 34,
+      "Enough water?": true,
+      "Productivity percentage": 73,
+      "Breakfast": "cereal"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-12-18",
+    "report": {
+      "Mood": "horrible",
+      "Excercise time?": 2,
+      "Enough water?": true,
+      "Productivity percentage": 97,
+      "Breakfast": "smoothie"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-12-19",
+    "report": {
+      "Mood": "happy",
+      "Excercise time?": 12,
+      "Enough water?": false,
+      "Productivity percentage": 40,
+      "Breakfast": "waffles"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-12-20",
+    "report": {
+      "Mood": "tired",
+      "Excercise time?": 20,
+      "Enough water?": true,
+      "Productivity percentage": 46,
+      "Breakfast": "waffles"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-12-21",
+    "report": {
+      "Mood": "motivated",
+      "Excercise time?": 8,
+      "Enough water?": false,
+      "Productivity percentage": 11,
+      "Breakfast": "pancakes"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-12-22",
+    "report": {
+      "Mood": "stressed",
+      "Excercise time?": 59,
+      "Enough water?": false,
+      "Productivity percentage": 29,
+      "Breakfast": "waffles"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-12-23",
+    "report": {
+      "Mood": "nice",
+      "Excercise time?": 63,
+      "Enough water?": true,
+      "Productivity percentage": 18,
+      "Breakfast": "banana pancakes"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-12-24",
+    "report": {
+      "Mood": "confident",
+      "Excercise time?": 21,
+      "Enough water?": true,
+      "Productivity percentage": 30,
+      "Breakfast": "banana pancakes"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-12-25",
+    "report": {
+      "Mood": "anxious",
+      "Excercise time?": 64,
+      "Enough water?": true,
+      "Productivity percentage": 68,
+      "Breakfast": "fruit salad"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-12-26",
+    "report": {
+      "Mood": "happy",
+      "Excercise time?": 48,
+      "Enough water?": true,
+      "Productivity percentage": 97,
+      "Breakfast": "eggs"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-12-27",
+    "report": {
+      "Mood": "exciting",
+      "Excercise time?": 20,
+      "Enough water?": true,
+      "Productivity percentage": 93,
+      "Breakfast": "pasta"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-12-28",
+    "report": {
+      "Mood": "focused",
+      "Excercise time?": 89,
+      "Enough water?": false,
+      "Productivity percentage": 71,
+      "Breakfast": "omelette"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-12-29",
+    "report": {
+      "Mood": "horrible",
+      "Excercise time?": 62,
+      "Enough water?": true,
+      "Productivity percentage": 49,
+      "Breakfast": "cereal"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-12-30",
+    "report": {
+      "Mood": "energetic",
+      "Excercise time?": 90,
+      "Enough water?": false,
+      "Productivity percentage": 82,
+      "Breakfast": "muffin"
+    }
+  },
+  {
+    "user_id": 1,
+    "date": "2023-12-31",
+    "report": {
+      "Mood": "confident",
+      "Excercise time?": 62,
+      "Enough water?": true,
+      "Productivity percentage": 61,
+      "Breakfast": "pasta"
+    }
+  }
+]
