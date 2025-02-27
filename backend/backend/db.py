@@ -29,7 +29,8 @@ class DB:
                 """--sql
                 CREATE TABLE IF NOT EXISTS reps (
                 user_id integer PRIMARY KEY,
-                report json
+                report json,
+                date date
             );
             """
             )
