@@ -1,9 +1,10 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-from io import BytesIO, StringIO
+from io import StringIO
 from json import loads
 from datetime import timedelta
-import seaborn as sns
+import plotly.express as px
+import plotly.io as io
 
 
 def prepare_data(data: str) -> pd.DataFrame:
@@ -88,16 +89,25 @@ def number_tag(
 
     df = df.sort_values(by='avg')
 
-    plot_buff: bin = BytesIO() # create the buffer to save and return a plot binary  
 
-    plt.style.use('dark_background') 
-    plt.figure(constrained_layout=True) # autoscale a figure's size
-    plt.barh(df[tag_param_name], df['avg'])
-    plt.xlabel(number_param_name)
-    plt.ylabel(tag_param_name)
-    plt.savefig(plot_buff, format='png', dpi=800) # save a plot binary in the buffer
+    fig = px.histogram(
+        x=df['avg'],
+        y=df[tag_param_name],
+        orientation='h'
+    )
 
-    return plot_buff.getvalue()
+    fig.update_layout(
+        template='plotly_dark',
+        xaxis=dict(
+            zeroline=False
+        ),
+        margin=dict(l=15, r=15, b=15, t=15)
+    )
+    fig.update_xaxes(title_text=number_param_name)
+    fig.update_yaxes(title_text=tag_param_name)
+    fig.update_traces(marker_color='#0066CC')
+
+    return io.to_image(fig, format='png', scale=5)
 
 
 def number_date(
@@ -158,38 +168,40 @@ def number_date(
     if scale == 'month':
         df['month'] = df['date'].dt.month_name()
         df['monthly_avg'] = df.groupby('month')[number_param_name].transform('mean')
-        x = 'monthly_avg'
-        y = 'month'
+        y = 'monthly_avg'
+        x = 'month'
         xlabel = 'month'
         rotation = 0
 
     elif scale == 'week':
-        df['week_start'] = (df['date'] - pd.to_timedelta(df['date'].dt.dayofweek, unit='D')).dt.strftime('%m-%d')
+        df['week_start'] = (df['date'] - pd.to_timedelta(df['date'].dt.dayofweek, unit='D'))
 
         df['weekly_avg'] = df.groupby('week_start')[number_param_name].transform('mean')
-        x = 'weekly_avg'
-        y = 'week_start'
+        y = 'weekly_avg'
+        x = 'week_start'
         xlabel = 'first day of the week'
 
     elif scale == 'day':
-        x = number_param_name
-        y = 'date'
+        y = number_param_name
+        x = 'date'
         xlabel = 'date'
 
-    plot_buff: bin = BytesIO() # create the buffer to save and return a plot binary
 
-    plt.style.use('dark_background') 
-    plt.figure(layout='constrained', figsize=(15,10))
-    plt.plot(df[y], df[x])
-    plt.xticks(rotation=rotation)
-    plt.tight_layout()
-    plt.xlabel('Date')
-    plt.ylabel(number_param_name)
+    fig = px.line(
+        x=df[x],
+        y=df[y],
+        orientation='h',
+    )
 
+    fig.update_layout(
+        template='plotly_dark',
+        margin=dict(l=15, r=15, b=15, t=15),
+    )
+    fig.update_yaxes(title_text=number_param_name)
+    fig.update_xaxes(title_text=xlabel)
+    fig.update_traces(marker_color='#0066CC')
 
-    plt.savefig(plot_buff, format='png', dpi=700, bbox_inches='tight') # save a plot binary in the buffer
-
-    return plot_buff.getvalue()
+    return io.to_image(fig, format='png', scale=5)
 
 
 with open('/home/slmpnv/dev/pet/reflex/graphs/graphs/mock/mock_data_365.json') as file:
@@ -197,5 +209,5 @@ with open('/home/slmpnv/dev/pet/reflex/graphs/graphs/mock/mock_data_365.json') a
 
 
 with open('res.png', 'wb') as file:
-    bdata = number_tag(data, number_param_name='Excercise time?', tag_param_name='Breakfast')
+    bdata = number_date(data, number_param_name='Excercise time?', scale='month')
     file.write(bdata)
