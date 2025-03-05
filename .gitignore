@@ -1,2 +1,8 @@
 frontend/node_modules
 backend/.venv
+backend/backend/.env
+backend/backend/__pycache__
+backend/backend/sandbox.py
+redis-data
+redisdata
+graphs/graphs/sandbox.py

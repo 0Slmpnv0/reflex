@@ -1,7 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 from io import StringIO
-from json import loads
 from datetime import timedelta
 import plotly.express as px
 import plotly.io as io
@@ -10,28 +9,33 @@ import plotly.io as io
 def prepare_data(data: str) -> pd.DataFrame:
     """Transforms JSON data with nested structure into a normalized DataFrame.
 
-    Processes JSON string containing nested 'report' objects by expanding them into
-    individual columns. Handles datetime conversion for the 'date' field.
+        Processes JSON string containing nested 'report' objects by expanding them into individual columns.
+        Automatically converts dates and removes the original nested structure.
 
-    Args:
-        data: JSON string containing user data with mandatory 'report' and 'date' fields.
-            Expected format:
-            {
-                "date": [dates...],
-                "report": [{"metric1": val, "metric2": val...}, ...]
-            }
+        Args:
+            data (str): JSON string with mandatory 'report' and 'date' fields. Expected format:
+                {
+                    "date": ["2023-01-01", ...],
+                    "report": [
+                        {"metric1": value1, "metric2": value2},
+                        ...
+                    ]
+                }
 
-    Returns:
-        pd.DataFrame: Processed dataframe with:
-            - Columns from original JSON's 'report' objects expanded as individual columns
-            - 'date' column converted to datetime64[ns] dtype
-            - Original 'report' column removed
+        Returns:
+            pd.DataFrame: Processed DataFrame containing:
+                - Columns derived from keys of the first 'report' object
+                - 'date' column converted to datetime64[ns] dtype
+                - Original 'report' field removed
 
-    Notes:
-        - Requires consistent keys in all 'report' objects (uses keys from first report)
-        - Will raise KeyError if input data lacks 'report' or 'date' fields
-        - Automatically converts date strings to pandas datetime objects
-        - Maintains original row order while expanding report metrics
+        Raises:
+            KeyError: If input data lacks 'report' or 'date' fields
+            ValueError: If 'report' objects contain inconsistent keys
+
+        Notes:
+            - Uses keys from the first 'report' object to create columns
+            - Maintains original row order from input data
+            - Does not handle nested structures within 'report' objects
     """
     df = pd.read_json(StringIO(data))
 
@@ -42,6 +46,8 @@ def prepare_data(data: str) -> pd.DataFrame:
     del df['report']
 
     df['date'] = pd.to_datetime(df['date'])
+
+
 
     return df
 
@@ -54,28 +60,27 @@ def number_tag(
     ) -> bin:
     """Generates a horizontal bar chart comparing average values across categorical tags.
 
-    Processes JSON data to show average numerical values grouped by categorical tags,
-    with optional date filtering. Bars are sorted ascendingly by value. Uses dark theme.
+    Processes JSON data to visualize average numerical values grouped by categorical tags
+    with optional date filtering. Implements ascending value sorting and dark theme styling.
 
     Args:
-        user_data_json: JSON string containing data with 'date', numerical, and tag fields
-        number_param_name: Name of numerical parameter to calculate averages
-        tag_param_name: Name of categorical parameter for grouping and y-axis labels
-        date_limit: Optional tuple (start_date, end_date) in YYYY-MM-DD format for filtering.
-            End date must be after start date.
+        user_data_json (str): JSON string containing data with 'date', numerical, and tag fields
+        number_param_name (str): Name of numerical field for average calculations
+        tag_param_name (str): Name of categorical field for grouping and y-axis labels
+        date_limit (tuple[str, str], optional): Date range filter as (start_date, end_date) in 
+            YYYY-MM-DD format. End date must be after start date.
 
     Returns:
-        Binary PNG image data of generated visualization.
+        bytes: Binary PNG image data of visualization
 
     Raises:
-        ValueError: If date_limit contains invalid range (end ≤ start)
+        ValueError: If date_limit contains invalid range (end date ≤ start date)
 
     Notes:
-        - Bars sorted ascending by average value
-        - Automatically adjusts layout to fit category labels
-        - Uses 800 DPI resolution for high-quality output
-        - Dark theme background with white elements
-        - Y-axis shows categorical tags, X-axis shows averaged numerical values
+        - Bars sorted in ascending order by average value
+        - Automatically optimizes layout dimensions for label visibility
+        - Y-axis displays categorical tags, X-axis shows averaged numerical values
+        - Uses plotly_dark template for visualization styling
     """
     df = prepare_data(user_data_json)
 
@@ -85,15 +90,23 @@ def number_tag(
         df['date'] = pd.to_datetime(df['date'])
         df = df[(df['date'] >= date_limit[0]) & (df['date'] <= date_limit[1])] # filter the data by date_limit values
 
-    df['avg'] = df.groupby(tag_param_name)[number_param_name].transform('mean') # create the column of the average num values per tags
+    df['avg'] = df.groupby(tag_param_name)[number_param_name].transform('mean')
 
+    # Сортировка DataFrame по средним значениям
     df = df.sort_values(by='avg')
 
+    # Упорядочивание категорий на оси Y
+    category_order = df[tag_param_name].unique()
 
+    # print(df['avg'].max())
+    # print(category_order)
+
+    # Построение графика
     fig = px.histogram(
-        x=df['avg'],
-        y=df[tag_param_name],
-        orientation='h'
+        x=df['avg'].unique(),
+        y=category_order,
+        orientation='h',
+        category_orders={tag_param_name: category_order}  # Указываем порядок категорий
     )
 
     fig.update_layout(
@@ -118,30 +131,31 @@ def number_date(
     ) -> bin:
     """Generates a time-series plot for numerical data aggregated at specified time intervals.
 
-    Processes JSON input data to create a line plot showing values aggregated by day/week/month.
-    Supports date filtering and includes validation for input parameters. Uses dark theme styling.
+    Processes JSON input to create line plots with temporal aggregation, implementing date filtering
+    and parameter validation. Features dark theme visualization with customizable time granularity.
 
     Args:
-        user_data_json: JSON string containing user data with 'date' field and numerical parameters.
-        number_param_name: Name of the numerical parameter/column to visualize.
-        scale: Time aggregation scale. Must be one of ('day', 'week', 'month'). Defaults to 'day'.
-        date_limit: Optional tuple of (start_date, end_date) strings (YYYY-MM-DD format) to filter data.
-            For 'month' scale, date range must span ≥31 days.
+        user_data_json (str): JSON string containing data with 'date' field and numerical parameters
+        number_param_name (str): Name of numerical column to aggregate and visualize
+        scale (str, optional): Temporal aggregation interval. Valid options: 'day', 'week', 'month'.
+            Defaults to 'day'.
+        date_limit (tuple[str, str], optional): Date filter range as (start_date, end_date) in 
+            YYYY-MM-DD format. Must have end_date > start_date.
 
     Returns:
-        Binary PNG image data of the generated plot.
+        bytes: Binary PNG image data of generated plot
 
     Raises:
-        ValueError: If any of these occur:
-            - Invalid `scale` value provided
-            - `date_limit` end date ≤ start date
-            - `month` scale used with date range <31 days
+        ValueError: For invalid parameters:
+            - Unsupported scale value (not in ['day', 'week', 'month'])
+            - Invalid date range (end_date ≤ start_date)
+            - Month-scale plot requested with date range <31 days
 
     Notes:
-        - X-axis labels rotate 90° except for monthly aggregations
-        - For weekly scale, x-axis shows week start dates (MM-DD format)
-        - Monthly aggregations use month names and horizontal labels
-        - Plot uses constrained layout with 1500x1000px dimensions and 700 DPI
+        - Aggregates numerical values using mean for selected time intervals
+        - Automatically sorts data chronologically before aggregation
+        - Optimizes plot layout for time-axis label visibility
+        - Uses plotly_dark template for consistent visual styling
     """
 
     df = prepare_data(user_data_json)
@@ -162,7 +176,6 @@ def number_date(
         if scale == 'month' and (pd.to_datetime(date_limit[1]) - pd.to_datetime(date_limit[0])) <= timedelta(31):
             raise ValueError
 
-    rotation = 90 # month scale will need to have a 0 rotation, so the rotation number is moved toa separate variable
 
     #modify data if needed 
     if scale == 'month':
@@ -171,7 +184,6 @@ def number_date(
         y = 'monthly_avg'
         x = 'month'
         xlabel = 'month'
-        rotation = 0
 
     elif scale == 'week':
         df['week_start'] = (df['date'] - pd.to_timedelta(df['date'].dt.dayofweek, unit='D'))
@@ -204,10 +216,77 @@ def number_date(
     return io.to_image(fig, format='png', scale=5)
 
 
+def tag_date(
+        user_data_json: str,
+        tag_param_name: str,
+        most_freq_tags_cnt: int = 10,
+        scale: str = 'week',
+        date_limit: tuple[str] = None
+    ) -> bin:
+    """Analyzes and visualizes tag frequency over a specified period.
+
+    Processes user JSON data, groups tags by weeks/months, and generates a bar chart.
+    Supports date range filtering and parameter validation.
+
+    Args:
+        user_data_json (str): JSON string containing user data
+        tag_param_name (str): Name of the DataFrame column containing tags to analyze
+        most_freq_tags_cnt (int, optional): Number of top frequent tags to display. Defaults to 10.
+        scale (str, optional): Grouping scale: 'week' or 'month'. Defaults to 'week'.
+        date_limit (tuple[str], optional): Date range filter as tuple of YYYY-MM-DD strings
+
+    Returns:
+        bin: Binary representation of bar chart image in PNG format
+
+    Raises:
+        ValueError: For invalid parameters:
+            - Invalid scale value
+            - Invalid date range format
+            - Date range too short for monthly analysis (<31 days)"""
+
+    df = prepare_data(user_data_json)
+
+    # Validate the parameters
+    if scale not in ['week', 'month']:
+        raise ValueError
+
+
+    # filter the data by date_limit values
+    if date_limit:
+        if not (pd.to_datetime(date_limit[1]) - pd.to_datetime(date_limit[0])) <= timedelta(0): 
+            df['date'] = pd.to_datetime(df['date'])
+            df = df[(df['date'] >= date_limit[0]) & (df['date'] <= date_limit[1])] # filter the data by date_limit values
+        else: 
+            raise ValueError
+        
+        if scale == 'month' and (pd.to_datetime(date_limit[1]) - pd.to_datetime(date_limit[0])) <= timedelta(31):
+            raise ValueError
+    
+
+    # change the data depending on the scale
+    if scale == 'week':
+        df['week'] = (df['date'] - pd.to_timedelta(df['date'].dt.dayofweek, unit='D'))
+        new_df = df.groupby('week', as_index=False)[tag_param_name].value_counts(sort=True)
+        x = 'week'    
+
+    elif scale == 'month':
+        df['month'] = df['date'].dt.month_name()
+        new_df = df.groupby('month', as_index=False)[tag_param_name].value_counts(sort=True)
+        x = 'month'
+    
+    # generate and return a figure 
+    fig = px.bar(new_df, x=x, y='count', color=tag_param_name)
+    fig.update_layout(
+        template='plotly_dark'
+    )
+    fig.show()
+    # return io.to_image(fig, format='png')
+
+
 with open('/home/slmpnv/dev/pet/reflex/graphs/graphs/mock/mock_data_365.json') as file:
     data = file.read()
 
 
 with open('res.png', 'wb') as file:
-    bdata = number_date(data, number_param_name='Excercise time?', scale='month')
-    file.write(bdata)
+    bdata = tag_date(data, tag_param_name='Breakfast', scale='month')
+    # file.write(bdata)
