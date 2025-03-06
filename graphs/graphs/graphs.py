@@ -198,7 +198,6 @@ def number_date(
         x = 'date'
         xlabel = 'date'
 
-
     fig = px.line(
         x=df[x],
         y=df[y],
@@ -219,7 +218,6 @@ def number_date(
 def tag_date(
         user_data_json: str,
         tag_param_name: str,
-        most_freq_tags_cnt: int = 10,
         scale: str = 'week',
         date_limit: tuple[str] = None
     ) -> bin:
@@ -279,8 +277,125 @@ def tag_date(
     fig.update_layout(
         template='plotly_dark'
     )
-    fig.show()
-    # return io.to_image(fig, format='png')
+    # fig.show()
+    return io.to_image(fig, format='png')
+
+
+def checkbox_date(
+        user_data_json: str,
+        checkbox_param_name: str,
+        date_limit: tuple[str] = None
+    ) -> bin:
+
+    """Generates a pie chart visualization for boolean parameter distribution with date filtering.
+
+    Processes JSON input to create a pie chart showing true/false ratio for a specified checkbox 
+    parameter. Implements optional date range filtering and automatic title generation with dark theme
+    visualization.
+
+    Args:
+        user_data_json (str): JSON string containing data with 'date' field and boolean parameters
+        checkbox_param_name (str): Name of boolean column to visualize as true/false distribution
+        date_limit (tuple[str, str], optional): Date filter range as (start_date, end_date) in 
+            YYYY-MM-DD format. Must have end_date > start_date. Defaults to None.
+
+    Returns:
+        bytes: Binary PNG image data of generated pie chart
+
+    Raises:
+        ValueError: If provided date range is invalid (end_date ≤ start_date)
+
+    Notes:
+        - Automatically converts date fields to datetime objects for comparison
+        - Uses plotly_dark template for consistent visual styling
+        - Title dynamically reflects checkbox parameter name and date filter when applied
+        - High-resolution output (scale=5) for clear image quality
+        - Raises ValueError before data processing if date range is chronologically invalid
+    """
+
+    # turn a json to dataframe
+    df = prepare_data(user_data_json)
+
+    # filter the data by date_limit values
+    if date_limit:
+        if not (pd.to_datetime(date_limit[1]) - pd.to_datetime(date_limit[0])) <= timedelta(0): 
+            df['date'] = pd.to_datetime(df['date'])
+            df = df[(df['date'] >= date_limit[0]) & (df['date'] <= date_limit[1])] # filter the data by date_limit values
+        else: 
+            raise ValueError
+
+    # handle the naming of the plot
+    title = f'"{checkbox_param_name}" true/false stats'
+    if date_limit:
+        title += f' from {date_limit[0]} to {date_limit[1]}'
+ 
+     # generate a graph
+    fig = px.pie(df, names=checkbox_param_name)
+   
+    fig.update_layout(
+        template='plotly_dark',
+        title=title
+    )
+    return io.to_image(fig, 'png', scale=5)
+
+
+def number_checkbox(
+        user_data_json: str, 
+        number_param_name: str,
+        checkbox_param_name: str,
+        date_limit: tuple[str] = None
+    ) -> bin:
+    """Generates comparative bar charts for numerical parameter averages across checkbox categories.
+
+    Processes JSON input to create grouped bar plots showing average values of a numerical parameter
+    for each unique category in a checkbox column. Supports optional date filtering and implements
+    automatic data aggregation with dark theme visualization.
+
+    Args:
+        user_data_json (str): JSON string containing data with 'date' field, numerical, and checkbox parameters
+        number_param_name (str): Name of numerical column to calculate averages
+        checkbox_param_name (str): Name of categorical column to group data by unique values
+        date_limit (tuple[str, str], optional): Date filter range as (start_date, end_date) in 
+            YYYY-MM-DD format. Must have end_date > start_date. Defaults to None.
+
+    Returns:
+        bytes: Binary PNG image data of generated bar chart
+
+    Raises:
+        ValueError: If provided date range is invalid (end_date ≤ start_date)
+
+    Notes:
+        - Automatically converts date fields to datetime objects for comparison
+        - Groups data by unique values in checkbox parameter column before averaging
+        - Uses plotly_dark template with default styling for visual consistency
+        - Returns empty plot visualization if checkbox column has no valid categories
+        - Handles missing values implicitly through pandas groupby operation
+        - Output resolution is set to high quality (scale=5) for clear image rendering
+    """
+
+    # turn a json to dataframe
+    df = prepare_data(user_data_json)
+
+    # filter the data by date_limit values
+    if date_limit:
+        if not (pd.to_datetime(date_limit[1]) - pd.to_datetime(date_limit[0])) <= timedelta(0): 
+            df['date'] = pd.to_datetime(df['date'])
+            df = df[(df['date'] >= date_limit[0]) & (df['date'] <= date_limit[1])] # filter the data by date_limit values
+        else: 
+            raise ValueError
+
+    # modify the data
+    new_df = pd.DataFrame()
+    new_df[checkbox_param_name] = df[checkbox_param_name].unique()
+    new_df['avg'] = df.groupby(checkbox_param_name)[number_param_name].mean()
+
+    # generate a plot
+    fig = px.bar(new_df, x=checkbox_param_name, y='avg')
+    fig.update_layout(
+        template = 'plotly_dark'
+    )
+
+    return io.to_image(fig, 'png', scale=5)
 
 
 with open('/home/slmpnv/dev/pet/reflex/graphs/graphs/mock/mock_data_365.json') as file:
@@ -288,5 +403,5 @@ with open('/home/slmpnv/dev/pet/reflex/graphs/graphs/mock/mock_data_365.json') a
 
 
 with open('res.png', 'wb') as file:
-    bdata = tag_date(data, tag_param_name='Breakfast', scale='month')
-    # file.write(bdata)
+    bdata = number_checkbox(data, checkbox_param_name='Enough water?', number_param_name='Productivity percentage', date_limit=('2023-01-01', '2023-06-01'))
+    file.write(bdata)
