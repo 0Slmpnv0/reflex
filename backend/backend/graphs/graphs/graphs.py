@@ -1,5 +1,4 @@
 import pandas as pd
-import matplotlib.pyplot as plt
 from io import StringIO
 from datetime import timedelta
 import plotly.express as px
