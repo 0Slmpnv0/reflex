@@ -5,7 +5,6 @@ from db import db
 from fastapi import FastAPI
 from routers import users, form
 
-
 app = FastAPI()
 
 app.include_router(users.users)
