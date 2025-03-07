@@ -29,7 +29,8 @@ class DB:
                 """--sql
                 CREATE TABLE IF NOT EXISTS reps (
                 user_id integer PRIMARY KEY,
-                report json
+                report json,
+                date date
             );
             """
             )
@@ -125,8 +126,8 @@ class DB:
             ic(e)
             return 500, str(e)
 
-    # form related querys
 
+    # form related querys
 
     def update_field_settings(self, user_id, new_settings):
         try:
@@ -144,7 +145,6 @@ class DB:
             self.connection.rollback()
             ic(e)
             return 500, str(e)
-
 
     def get_field_settings(self, user_id):
         try:
