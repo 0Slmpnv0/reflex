@@ -103,6 +103,7 @@ class DB:
             )
             res = self.cursor.fetchone()
             return 200, (res[0], res[1])
+
         except Exception as e:
             self.connection.rollback()
             ic(e)
@@ -124,6 +125,7 @@ class DB:
         except Exception as e:
             ic(e)
             return 500, str(e)
+
 
     # form related querys
 
