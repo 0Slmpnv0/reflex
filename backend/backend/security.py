@@ -6,6 +6,7 @@ from redis_db import redis
 import hashlib
 from db import db
 from redis_db import redis
+from config import cookie_expiration
 
 
 def validate_cookie(user_id, cookie_to_check):
@@ -22,7 +23,7 @@ def validate_cookie(user_id, cookie_to_check):
 def add_cookie(user_id) -> str:
     session_token = secrets.token_hex(16)
     try:
-        redis.set(f"{user_id}_session_key", session_token, ex=20 * 86400)
+        redis.set(f"{user_id}_session_key", session_token, ex=cookie_expiration)
         return 200, session_token
     except Exception as e:
         ic(e)

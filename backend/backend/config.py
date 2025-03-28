@@ -8,3 +8,4 @@ REDIS_CONNECT_DATA = {
     "username": get_key(".env", "REDIS_USER"),
     "password": get_key(".env", "REDIS_PASSWORD"),
 }
+cookie_expiration=20*86400 

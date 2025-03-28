@@ -5,6 +5,7 @@ from icecream import ic
 from db import db
 from typing import Optional, Dict
 from redis_db import redis
+from config import cookie_expiration
 
 
 class User(BaseModel):
@@ -63,7 +64,13 @@ def auth_a_user(login, password):
     if not redis.exists(f"{user_id}_session_key"):
         status, resp = add_cookie(user_id)
         if status == 200:
-            response.set_cookie(key="auth_cookie", value=resp)
+            response.set_cookie(
+                key="auth_cookie",
+                value=resp, 
+                max_age=cookie_expiration, 
+                samesite=True, 
+                httponly=True
+            )
         else:
             response.content = {"status": 500, "e": resp}
     response.content = content
