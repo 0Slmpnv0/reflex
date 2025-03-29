@@ -4,6 +4,7 @@ from icecream import ic
 from typing import Annotated, Optional, Literal
 from security import validate_cookie
 from pydantic import BaseModel, Field
+from config import invalid_cookie_message
 
 
 class Display(BaseModel):
@@ -41,14 +42,16 @@ def update_form(
     ):
     status, res = validate_cookie(user_id, auth_cookie)
     if not res:
-        return {"status": 403, msg: "Forbidden! Cookies do not match"}
+        return {"status": 403, "message": invalid_cookie_message}
     if status == 200 and res:
-        new_settings_json = '[';
+        new_settings_json = '['
         for field in new_settings:
             new_settings_json += field.model_dump_json() + ","
         new_settings_json = new_settings_json[:-1] + "]"
         status, msg = db.update_field_settings(user_id, new_settings_json)
-        return {"status": status, "msg": msg}
+        return {"status": status, "message": msg}
+    else:
+        return {"status": status, "message": res}
 
 
 @form.get("/get_form")
@@ -58,7 +61,7 @@ def get_form_settings(
     ):
     status, res = validate_cookie(user_id, auth_cookie)
     if not res:
-        return {"status": 403, "msg": "Forbidden! Cookies do not match"}
+        return {"status": 403, "message": invalid_cookie_message}
     if status == 200 and res:
         status, res = db.get_field_settings(user_id)
-    return {"status": status, "res": res}
+    return {"status": status, "form": res}

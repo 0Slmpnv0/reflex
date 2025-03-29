@@ -30,7 +30,7 @@ class DB:
                 CREATE TABLE IF NOT EXISTS reps (
                 user_id integer PRIMARY KEY,
                 report json,
-                date date
+                date date UNIQUE
             );
             """
             )
@@ -171,5 +171,13 @@ class DB:
 
         return 200, 'success!'
 
+    def get_report(self, user_id, date):
+        try:
+            self.cursor.execute('''SELECT report FROM reps WHERE user_id = %s AND date = %s''' , (user_id, date,))
+            return 200, self.cursor.fetchone()  
+        except Exception as e:
+            ic(e)
+            return 500, str(e)
+    
 
 db = DB(PG_CONNECT_DATA)
