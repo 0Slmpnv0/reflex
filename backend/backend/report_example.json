@@ -1,0 +1,22 @@
+[
+    {
+      "name": "How do I feel today?",
+      "value": "exiting"
+    },
+    {
+      "name": "How many minutes did I exercise?",
+      "value": 30
+    },
+    {
+      "name": "Did I drink enough water?",
+      "value": true
+    },
+    {
+      "name": "What percentage of time was I productive?",
+      "value": 85
+    },
+    {
+      "name": "Todays breakfast?",
+      "value": "omelette"
+    }
+  ]
