@@ -156,20 +156,20 @@ class DB:
             ic(e)
             return 500, str(e)
 
-    def add_report(self, user_id, report):
+    def add_report(self, user_id, report, date):
         try:
             self.cursor.execute(
-                """INSERT INTO reps (user_id, report) 
-                VALUES (%s, %s)""",
-                (user_id, report),
+                """INSERT INTO reps (user_id, report, date) 
+                VALUES (%s, %s, %s)""",
+                (user_id, report, date),
             )
         except Exception as e:
             self.connection.rollback()
-            print(e)
-            return 500
+            ic(e)
+            return 500, str(e)
         self.connection.commit()
 
-        return 200
+        return 200, 'success!'
 
 
 db = DB(PG_CONNECT_DATA)

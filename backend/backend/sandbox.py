@@ -1,42 +1,26 @@
 string = '''[
   {
-    "name": "string",
-    "type": "tag",
-    "options": [
-      "string"
-    ],
-    "is_required": false,
-    "display": {
-      "is_display_field": true,
-      "is_positive": true
-    }
+    "name": "How do I feel today?",
+    "value": "exiting"
   },
   {
-    "name": "string2",
-    "type": "number",
+    "name": "How many minutes did I exercise?",
+    "value": 50
   },
   {
-    "name": "check",
-    "type": "checkbox",
-    "is_required": false,
-    "display": {
-      "is_display_field": true,
-    }
+    "name": "Did I drink enough water?",
+    "value": True
   },
   {
-    "name": "string",
-    "type": "tag",
-    "options": [
-      "string"
-    ],
-    "is_required": false,
-    "display": {
-      "is_display_field": true,
-      "is_positive": true
-    }
+    "name": "What percentage of time was I productive?",
+    "value": 100
   },
+  {
+    "name": "Todays breakfast?",
+    "value": "bread"
+  }
 ]'''
 
 print(string[200:255])
 print('\n')
-print(string[249])
+print(string[201])

@@ -35,8 +35,10 @@ form = APIRouter(prefix="/form")
 
 @form.post("/update_form_settings")
 def update_form(
-    user_id, new_settings: list[FieldSettings], auth_cookie: Annotated[str, Cookie()]
-):
+    user_id, 
+    new_settings: list[FieldSettings], 
+    auth_cookie: Annotated[str, Cookie()]
+    ):
     status, res = validate_cookie(user_id, auth_cookie)
     if not res:
         return {"status": 403, msg: "Forbidden! Cookies do not match"}
@@ -50,7 +52,10 @@ def update_form(
 
 
 @form.get("/get_form")
-def get_form_settings(user_id, auth_cookie: Annotated[str, Cookie()]):
+def get_form_settings(
+    user_id, 
+    auth_cookie: Annotated[str, Cookie()]
+    ):
     status, res = validate_cookie(user_id, auth_cookie)
     if not res:
         return {"status": 403, "msg": "Forbidden! Cookies do not match"}
