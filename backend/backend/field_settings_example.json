@@ -1,0 +1,38 @@
+[
+  {
+    "name": "How do I feel today?",
+    "type": "tag",
+    "options": ["nice", "cool", "horrible", "exiting"],
+    "display": {
+      "is_display_field": false
+    }
+  },
+  {
+    "name": "How many minutes did I exercise?",
+    "type": "number",
+    "display": {
+      "is_display_field": false
+    }
+  },
+  {
+    "name": "Did I drink enough water?",
+    "type": "checkbox",
+    "display": {
+      "is_display_field": false
+    }
+  },
+  {
+    "name": "What percentage of time was I productive?",
+    "type": "percent",
+    "display": {
+      "is_display_field": true
+    }
+  },
+  {
+    "name": "Todays breakfast?",
+    "type": "tag",
+    "display": {
+      "is_display_field": false
+    }
+  }
+]

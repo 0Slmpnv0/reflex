@@ -3,13 +3,14 @@ from icecream import ic
 from db import db
 
 from fastapi import FastAPI
-from routers import users, form
+from routers import users, form, report
 
 
 app = FastAPI()
 
 app.include_router(users.users)
 app.include_router(form.form)
+app.include_router(report.report)
 
 
 @app.on_event("startup")

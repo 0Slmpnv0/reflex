@@ -4,11 +4,12 @@ from icecream import ic
 from typing import Annotated, Optional, Literal
 from security import validate_cookie
 from pydantic import BaseModel, Field
+from config import invalid_cookie_message
 
 
 class Display(BaseModel):
     is_display_field: bool
-    is_positive: Optional[bool]  # experimental. Won't be used yet
+    is_positive: Optional[bool] = None  # experimental. Won't be used yet
 
 
 class FieldSettings(BaseModel):
@@ -24,7 +25,10 @@ class FieldSettings(BaseModel):
         title="Is the field required to be filled?",
         description="Experimental field. Not required yet",
     )  # experimental too
-    display: Optional[Display]
+    display: Optional[Display] = Field(
+        default=False,
+        title="Will this field be displayed on the calendar page?"
+    )
 
 
 form = APIRouter(prefix="/form")
@@ -32,21 +36,32 @@ form = APIRouter(prefix="/form")
 
 @form.post("/update_form_settings")
 def update_form(
-    user_id, new_settings: FieldSettings, auth_cookie: Annotated[str, Cookie()]
-):
+    user_id, 
+    new_settings: list[FieldSettings], 
+    auth_cookie: Annotated[str, Cookie()]
+    ):
     status, res = validate_cookie(user_id, auth_cookie)
     if not res:
-        return {"status": 403, msg: "Forbidden! Cookies do not match"}
+        return {"status": 403, "message": invalid_cookie_message}
     if status == 200 and res:
-        status, msg = db.update_field_settings(user_id, new_settings.model_dump_json())
-        return {"status": status, "msg": msg}
+        new_settings_json = '['
+        for field in new_settings:
+            new_settings_json += field.model_dump_json() + ","
+        new_settings_json = new_settings_json[:-1] + "]"
+        status, msg = db.update_field_settings(user_id, new_settings_json)
+        return {"status": status, "message": msg}
+    else:
+        return {"status": status, "message": res}
 
 
 @form.get("/get_form")
-def get_form_settings(user_id, auth_cookie: Annotated[str, Cookie()]):
+def get_form_settings(
+    user_id, 
+    auth_cookie: Annotated[str, Cookie()]
+    ):
     status, res = validate_cookie(user_id, auth_cookie)
     if not res:
-        return {"status": 403, "msg": "Forbidden! Cookies do not match"}
+        return {"status": 403, "message": invalid_cookie_message}
     if status == 200 and res:
         status, res = db.get_field_settings(user_id)
-    return {"status": status, "res": res}
+    return {"status": status, "form": res}

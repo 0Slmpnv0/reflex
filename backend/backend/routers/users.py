@@ -1,10 +1,10 @@
-from fastapi import APIRouter, Response
+from fastapi import APIRouter, Response, Path
 from pydantic import BaseModel
 from security import hash_a_password, add_cookie, compare_passwords
 from icecream import ic
 from db import db
-from typing import Optional, Dict
-from redis_db import redis
+from typing import Union
+from config import cookie_expiration
 
 
 class User(BaseModel):
@@ -49,22 +49,31 @@ def validate_login(login):
 
 
 @users.post("/password_login")
-def auth_a_user(login, password):
+def auth_a_user(
+    login, 
+    password, 
+    remember_me: Union[bool, str]
+    ):
 
     if not compare_passwords(login, password):
         return {"status": 403, "msg": "Forbidden! Wrong password"}
-
-    response = Response()
-    content = {"status": 200}
-    status, res = db.get_user_id(login)
-    if status != 200:
-        return {"status": status, "msg": res}
-    user_id = res
-    if not redis.exists(f"{user_id}_session_key"):
+    content = {"status": 200, "message": "Authorised!"}
+    if remember_me == 'true':
+        response = Response()
+        status, res = db.get_user_id(login)
+        if status != 200:
+            return {"status": status, "messge": res}
+        user_id = res
         status, resp = add_cookie(user_id)
-        if status == 200:
-            response.set_cookie(key="auth_cookie", value=resp)
-        else:
-            response.content = {"status": 500, "e": resp}
-    response.content = content
-    return response
+        if status != 200:
+            return {"status":status, "message": resp}
+        response.set_cookie(
+            key="auth_cookie",
+            value=resp, 
+            max_age=cookie_expiration, 
+            samesite="strict", 
+            httponly=True
+        )
+        response.content = content
+        return response
+    return content
